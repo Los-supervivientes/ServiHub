@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
 		6E0879B02C37125D00530B06 /* ServiHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879AF2C37125D00530B06 /* ServiHubApp.swift */; };
 		6E0879B22C37125D00530B06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879B12C37125D00530B06 /* ContentView.swift */; };
 		6E0879B42C37125E00530B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0879B32C37125E00530B06 /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		6E0879CC2C37125E00530B06 /* ServiHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */; };
 		6E0879CE2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */; };
 		6E0879DD2C37130900530B06 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E0879DC2C37130900530B06 /* KeychainSwift */; };
-		6E0879E02C37131E00530B06 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 6E0879DF2C37131E00530B06 /* ViewInspector */; };
 		6E62EEC22C371732008205B4 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62EEC12C371732008205B4 /* Crypto.swift */; };
 		6E62EEC42C37173F008205B4 /* PersistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62EEC32C37173F008205B4 /* PersistentData.swift */; };
 		6E62EECF2C371836008205B4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62EECE2C371836008205B4 /* LoginViewModel.swift */; };
@@ -69,7 +69,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E0879DD2C37130900530B06 /* KeychainSwift in Frameworks */,
-				6E0879E02C37131E00530B06 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E324D52C39226B0072A137 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +284,6 @@
 			name = ServiHub;
 			packageProductDependencies = (
 				6E0879DC2C37130900530B06 /* KeychainSwift */,
-				6E0879DF2C37131E00530B06 /* ViewInspector */,
 			);
 			productName = ServiHub;
 			productReference = 6E0879AC2C37125D00530B06 /* ServiHub.app */;
@@ -304,6 +303,9 @@
 				6E0879BF2C37125E00530B06 /* PBXTargetDependency */,
 			);
 			name = ServiHubTests;
+			packageProductDependencies = (
+				42E324D42C39226B0072A137 /* ViewInspector */,
+			);
 			productName = ServiHubTests;
 			productReference = 6E0879BD2C37125E00530B06 /* ServiHubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -360,7 +362,7 @@
 			mainGroup = 6E0879A32C37125D00530B06;
 			packageReferences = (
 				6E0879DB2C37130900530B06 /* XCRemoteSwiftPackageReference "keychain-swift" */,
-				6E0879DE2C37131E00530B06 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = 6E0879AD2C37125D00530B06 /* Products */;
 			projectDirPath = "";
@@ -765,6 +767,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:nalexn/ViewInspector.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.11;
+			};
+		};
 		6E0879DB2C37130900530B06 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
@@ -773,26 +783,18 @@
 				version = 24.0.0;
 			};
 		};
-		6E0879DE2C37131E00530B06 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nalexn/ViewInspector";
-			requirement = {
-				kind = exactVersion;
-				version = 0.9.11;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		42E324D42C39226B0072A137 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
 		6E0879DC2C37130900530B06 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6E0879DB2C37130900530B06 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
-		};
-		6E0879DF2C37131E00530B06 /* ViewInspector */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E0879DE2C37131E00530B06 /* XCRemoteSwiftPackageReference "ViewInspector" */;
-			productName = ViewInspector;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
