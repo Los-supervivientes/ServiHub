@@ -7,12 +7,34 @@
 
 import SwiftUI
 
+//MARK: - Pantalla de Home
+
 struct HomeView: View {
+    @EnvironmentObject var rootViewModel: RootViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+            ZStack{
+                ///Creamos imagen de fondo
+                Image(.fondoLogin)
+                    .resizable()
+                    .id(1)
+                VStack{
+                    Text("HOME")
+                    
+                }
+                
+      
+            }
+            .ignoresSafeArea()
+        }
     }
-}
+
 
 #Preview {
+  
     HomeView()
+            // Indicamos que se muestre la vista en modo día por defecto
+        .preferredColorScheme(.light)
+
 }

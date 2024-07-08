@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
+		5221C7552C3AA1D300A9024A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221C7542C3AA1D300A9024A /* LoginView.swift */; };
+		5221C7582C3AA22B00A9024A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221C7572C3AA22B00A9024A /* LoadingView.swift */; };
+		5221C75A2C3AA4C200A9024A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221C7592C3AA4C200A9024A /* RegisterView.swift */; };
+		5221C75C2C3AAC6700A9024A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221C75B2C3AAC6700A9024A /* HomeView.swift */; };
+		52A5DAD62C39C8A200FA2E43 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5DAD52C39C8A200FA2E43 /* RootView.swift */; };
+		52A5DAD82C39C9AD00FA2E43 /* RootStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5DAD72C39C9AD00FA2E43 /* RootStatus.swift */; };
+		52FB5F362C3C5E300016035A /* Grandstander-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52FB5F352C3C5E300016035A /* Grandstander-VariableFont_wght.ttf */; };
 		6E0879B02C37125D00530B06 /* ServiHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879AF2C37125D00530B06 /* ServiHubApp.swift */; };
 		6E0879B22C37125D00530B06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879B12C37125D00530B06 /* ContentView.swift */; };
 		6E0879B42C37125E00530B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0879B32C37125E00530B06 /* Assets.xcassets */; };
-		6E0879B82C37125E00530B06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0879B72C37125E00530B06 /* Preview Assets.xcassets */; };
 		6E0879C22C37125E00530B06 /* ServiHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879C12C37125E00530B06 /* ServiHubTests.swift */; };
 		6E0879CC2C37125E00530B06 /* ServiHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */; };
 		6E0879CE2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */; };
@@ -43,12 +49,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5221C7542C3AA1D300A9024A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5221C7572C3AA22B00A9024A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		5221C7592C3AA4C200A9024A /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		5221C75B2C3AAC6700A9024A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		52A5DAD52C39C8A200FA2E43 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		52A5DAD72C39C9AD00FA2E43 /* RootStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStatus.swift; sourceTree = "<group>"; };
+		52FB5F352C3C5E300016035A /* Grandstander-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		52FB5F392C3C60830016035A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6E0879AC2C37125D00530B06 /* ServiHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0879AF2C37125D00530B06 /* ServiHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiHubApp.swift; sourceTree = "<group>"; };
 		6E0879B12C37125D00530B06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6E0879B32C37125E00530B06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E0879B52C37125E00530B06 /* ServiHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServiHub.entitlements; sourceTree = "<group>"; };
-		6E0879B72C37125E00530B06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E0879BD2C37125E00530B06 /* ServiHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0879C12C37125E00530B06 /* ServiHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiHubTests.swift; sourceTree = "<group>"; };
 		6E0879C72C37125E00530B06 /* ServiHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +103,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5221C7562C3AA21300A9024A /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				5221C7572C3AA22B00A9024A /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		52FB5F342C3C5E080016035A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52FB5F352C3C5E300016035A /* Grandstander-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		6E0879A32C37125D00530B06 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +142,7 @@
 		6E0879AE2C37125D00530B06 /* ServiHub */ = {
 			isa = PBXGroup;
 			children = (
+				52FB5F392C3C60830016035A /* Info.plist */,
 				6E0879B52C37125E00530B06 /* ServiHub.entitlements */,
 				6E0879DA2C37127000530B06 /* App */,
 				6E62EEBD2C3716D0008205B4 /* Presentation */,
@@ -121,14 +151,6 @@
 				6E0879B12C37125D00530B06 /* ContentView.swift */,
 			);
 			path = ServiHub;
-			sourceTree = "<group>";
-		};
-		6E0879B62C37125E00530B06 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6E0879B72C37125E00530B06 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		6E0879C02C37125E00530B06 /* ServiHubTests */ = {
@@ -151,9 +173,9 @@
 		6E0879DA2C37127000530B06 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				52FB5F342C3C5E080016035A /* Fonts */,
 				6E0879B32C37125E00530B06 /* Assets.xcassets */,
 				6E0879AF2C37125D00530B06 /* ServiHubApp.swift */,
-				6E0879B62C37125E00530B06 /* Preview Content */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -180,6 +202,7 @@
 		6E62EEBD2C3716D0008205B4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5221C7562C3AA21300A9024A /* Loading */,
 				6E62EECA2C37178B008205B4 /* Home */,
 				6E62EECC2C3717AC008205B4 /* Register */,
 				6E62EEC92C371786008205B4 /* Login */,
@@ -231,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				6E62EED42C371856008205B4 /* RootViewModel.swift */,
+				52A5DAD52C39C8A200FA2E43 /* RootView.swift */,
+				52A5DAD72C39C9AD00FA2E43 /* RootStatus.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -239,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				6E62EECE2C371836008205B4 /* LoginViewModel.swift */,
+				5221C7542C3AA1D300A9024A /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -247,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				6E62EED02C371840008205B4 /* HomeViewModel.swift */,
+				5221C75B2C3AAC6700A9024A /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -255,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				6E62EED22C37184E008205B4 /* RegisterViewModel.swift */,
+				5221C7592C3AA4C200A9024A /* RegisterView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -380,7 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0879B82C37125E00530B06 /* Preview Assets.xcassets in Resources */,
+				52FB5F362C3C5E300016035A /* Grandstander-VariableFont_wght.ttf in Resources */,
 				6E0879B42C37125E00530B06 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,11 +437,17 @@
 				6E0879B22C37125D00530B06 /* ContentView.swift in Sources */,
 				6E62EED12C371840008205B4 /* HomeViewModel.swift in Sources */,
 				6E62EED32C37184E008205B4 /* RegisterViewModel.swift in Sources */,
+				5221C75C2C3AAC6700A9024A /* HomeView.swift in Sources */,
+				5221C75A2C3AA4C200A9024A /* RegisterView.swift in Sources */,
 				6E62EED72C371871008205B4 /* Protocols.swift in Sources */,
+				52A5DAD82C39C9AD00FA2E43 /* RootStatus.swift in Sources */,
+				52A5DAD62C39C8A200FA2E43 /* RootView.swift in Sources */,
+				5221C7552C3AA1D300A9024A /* LoginView.swift in Sources */,
 				6E62EEC22C371732008205B4 /* Crypto.swift in Sources */,
 				6E62EEC42C37173F008205B4 /* PersistentData.swift in Sources */,
 				6E62EECF2C371836008205B4 /* LoginViewModel.swift in Sources */,
 				6E62EED52C371856008205B4 /* RootViewModel.swift in Sources */,
+				5221C7582C3AA22B00A9024A /* LoadingView.swift in Sources */,
 				6E0879B02C37125D00530B06 /* ServiHubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +610,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ServiHub/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -613,6 +649,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ServiHub/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

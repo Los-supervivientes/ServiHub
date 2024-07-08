@@ -2,7 +2,16 @@
 //  RootStatus.swift
 //  ServiHub
 //
-//  Created by Macbook Pro on 6/7/24.
+//  Created by EquipoSupervivientes!! on 4/7/24.
 //
 
+//MARK: - Creamos estados para el rootView
 import Foundation
+
+enum Status {
+    case initial
+    case loading
+    case loaded
+    case register
+    case error(error: String)
+}
