@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4203A5332C3D9F7C0099E0ED /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5232C3D9F7C0099E0ED /* HomeView.swift */; };
+		4203A5342C3D9F7C0099E0ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5242C3D9F7C0099E0ED /* HomeViewModel.swift */; };
+		4203A5352C3D9F7C0099E0ED /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5262C3D9F7C0099E0ED /* LoadingView.swift */; };
+		4203A5362C3D9F7C0099E0ED /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5282C3D9F7C0099E0ED /* LoginView.swift */; };
+		4203A5372C3D9F7C0099E0ED /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5292C3D9F7C0099E0ED /* LoginViewModel.swift */; };
+		4203A5382C3D9F7C0099E0ED /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A52B2C3D9F7C0099E0ED /* RegisterView.swift */; };
+		4203A5392C3D9F7C0099E0ED /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A52C2C3D9F7C0099E0ED /* RegisterViewModel.swift */; };
+		4203A53A2C3D9F7C0099E0ED /* RootStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A52E2C3D9F7C0099E0ED /* RootStatus.swift */; };
+		4203A53B2C3D9F7C0099E0ED /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A52F2C3D9F7C0099E0ED /* RootView.swift */; };
+		4203A53C2C3D9F7C0099E0ED /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5302C3D9F7C0099E0ED /* RootViewModel.swift */; };
+		4203A5432C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4203A53D2C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf */; };
+		4203A5442C3D9F8D0099E0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4203A5402C3D9F8D0099E0ED /* Assets.xcassets */; };
+		4203A5452C3D9F8D0099E0ED /* ServiHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5412C3D9F8D0099E0ED /* ServiHubApp.swift */; };
 		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
 		42E324DB2C3923E70072A137 /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DA2C3923E70072A137 /* NetworError.swift */; };
 		42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */; };
@@ -22,18 +35,10 @@
 		42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */; };
 		42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324F72C392C490072A137 /* LoginUseCase.swift */; };
 		42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324FA2C3937500072A137 /* SecureDataKeychain.swift */; };
-		6E0879B02C37125D00530B06 /* ServiHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879AF2C37125D00530B06 /* ServiHubApp.swift */; };
-		6E0879B22C37125D00530B06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879B12C37125D00530B06 /* ContentView.swift */; };
-		6E0879B42C37125E00530B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0879B32C37125E00530B06 /* Assets.xcassets */; };
-		6E0879B82C37125E00530B06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0879B72C37125E00530B06 /* Preview Assets.xcassets */; };
 		6E0879C22C37125E00530B06 /* ServiHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879C12C37125E00530B06 /* ServiHubTests.swift */; };
 		6E0879CC2C37125E00530B06 /* ServiHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */; };
 		6E0879CE2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */; };
 		6E0879DD2C37130900530B06 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E0879DC2C37130900530B06 /* KeychainSwift */; };
-		6E62EECF2C371836008205B4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62EECE2C371836008205B4 /* LoginViewModel.swift */; };
-		6E62EED12C371840008205B4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62EED02C371840008205B4 /* HomeViewModel.swift */; };
-		6E62EED32C37184E008205B4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62EED22C37184E008205B4 /* RegisterViewModel.swift */; };
-		6E62EED52C371856008205B4 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62EED42C371856008205B4 /* RootViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4203A5232C3D9F7C0099E0ED /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4203A5242C3D9F7C0099E0ED /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4203A5262C3D9F7C0099E0ED /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4203A5282C3D9F7C0099E0ED /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4203A5292C3D9F7C0099E0ED /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4203A52B2C3D9F7C0099E0ED /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		4203A52C2C3D9F7C0099E0ED /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		4203A52E2C3D9F7C0099E0ED /* RootStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootStatus.swift; sourceTree = "<group>"; };
+		4203A52F2C3D9F7C0099E0ED /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4203A5302C3D9F7C0099E0ED /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		4203A53D2C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		4203A5402C3D9F8D0099E0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4203A5412C3D9F8D0099E0ED /* ServiHubApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiHubApp.swift; sourceTree = "<group>"; };
+		4203A5482C3DA0AF0099E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		42E324DA2C3923E70072A137 /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthentication.swift; sourceTree = "<group>"; };
 		42E324DE2C3924030072A137 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
@@ -69,20 +88,12 @@
 		42E324F72C392C490072A137 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		42E324FA2C3937500072A137 /* SecureDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataKeychain.swift; sourceTree = "<group>"; };
 		6E0879AC2C37125D00530B06 /* ServiHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E0879AF2C37125D00530B06 /* ServiHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiHubApp.swift; sourceTree = "<group>"; };
-		6E0879B12C37125D00530B06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6E0879B32C37125E00530B06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E0879B52C37125E00530B06 /* ServiHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServiHub.entitlements; sourceTree = "<group>"; };
-		6E0879B72C37125E00530B06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E0879BD2C37125E00530B06 /* ServiHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0879C12C37125E00530B06 /* ServiHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiHubTests.swift; sourceTree = "<group>"; };
 		6E0879C72C37125E00530B06 /* ServiHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiHubUITests.swift; sourceTree = "<group>"; };
 		6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiHubUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6E62EECE2C371836008205B4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		6E62EED02C371840008205B4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		6E62EED22C37184E008205B4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		6E62EED42C371856008205B4 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +123,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4203A5252C3D9F7C0099E0ED /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4203A5232C3D9F7C0099E0ED /* HomeView.swift */,
+				4203A5242C3D9F7C0099E0ED /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4203A5272C3D9F7C0099E0ED /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				4203A5262C3D9F7C0099E0ED /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		4203A52A2C3D9F7C0099E0ED /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4203A5282C3D9F7C0099E0ED /* LoginView.swift */,
+				4203A5292C3D9F7C0099E0ED /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4203A52D2C3D9F7C0099E0ED /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4203A52B2C3D9F7C0099E0ED /* RegisterView.swift */,
+				4203A52C2C3D9F7C0099E0ED /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		4203A5312C3D9F7C0099E0ED /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				4203A52E2C3D9F7C0099E0ED /* RootStatus.swift */,
+				4203A52F2C3D9F7C0099E0ED /* RootView.swift */,
+				4203A5302C3D9F7C0099E0ED /* RootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		4203A5322C3D9F7C0099E0ED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4203A5252C3D9F7C0099E0ED /* Home */,
+				4203A5272C3D9F7C0099E0ED /* Loading */,
+				4203A52A2C3D9F7C0099E0ED /* Login */,
+				4203A52D2C3D9F7C0099E0ED /* Register */,
+				4203A5312C3D9F7C0099E0ED /* Root */,
+			);
+			name = Presentation;
+			path = ../../../../Downloads/ServiHub/ServiHub/ServiHub/Presentation;
+			sourceTree = "<group>";
+		};
+		4203A53E2C3D9F8D0099E0ED /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4203A53D2C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4203A5422C3D9F8D0099E0ED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4203A53E2C3D9F8D0099E0ED /* Fonts */,
+				4203A5402C3D9F8D0099E0ED /* Assets.xcassets */,
+				4203A5412C3D9F8D0099E0ED /* ServiHubApp.swift */,
+			);
+			name = App;
+			path = ../../../../Downloads/ServiHub/ServiHub/ServiHub/App;
+			sourceTree = "<group>";
+		};
 		42E324D62C3923430072A137 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,21 +294,14 @@
 		6E0879AE2C37125D00530B06 /* ServiHub */ = {
 			isa = PBXGroup;
 			children = (
+				4203A5482C3DA0AF0099E0ED /* Info.plist */,
 				6E0879B52C37125E00530B06 /* ServiHub.entitlements */,
-				6E0879DA2C37127000530B06 /* App */,
-				6E62EEBD2C3716D0008205B4 /* Presentation */,
+				4203A5422C3D9F8D0099E0ED /* App */,
+				4203A5322C3D9F7C0099E0ED /* Presentation */,
 				6E62EEBC2C3716CC008205B4 /* Domain */,
 				6E62EEBB2C3716C1008205B4 /* Data */,
 			);
 			path = ServiHub;
-			sourceTree = "<group>";
-		};
-		6E0879B62C37125E00530B06 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6E0879B72C37125E00530B06 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		6E0879C02C37125E00530B06 /* ServiHubTests */ = {
@@ -238,16 +319,6 @@
 				6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */,
 			);
 			path = ServiHubUITests;
-			sourceTree = "<group>";
-		};
-		6E0879DA2C37127000530B06 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				6E0879B32C37125E00530B06 /* Assets.xcassets */,
-				6E0879AF2C37125D00530B06 /* ServiHubApp.swift */,
-				6E0879B62C37125E00530B06 /* Preview Content */,
-			);
-			path = App;
 			sourceTree = "<group>";
 		};
 		6E62EEBB2C3716C1008205B4 /* Data */ = {
@@ -271,56 +342,12 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		6E62EEBD2C3716D0008205B4 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				6E0879B12C37125D00530B06 /* ContentView.swift */,
-				6E62EECA2C37178B008205B4 /* Home */,
-				6E62EECC2C3717AC008205B4 /* Register */,
-				6E62EEC92C371786008205B4 /* Login */,
-				6E62EEC82C371774008205B4 /* Root */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		6E62EEC72C371769008205B4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		6E62EEC82C371774008205B4 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				6E62EED42C371856008205B4 /* RootViewModel.swift */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
-		6E62EEC92C371786008205B4 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				6E62EECE2C371836008205B4 /* LoginViewModel.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		6E62EECA2C37178B008205B4 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				6E62EED02C371840008205B4 /* HomeViewModel.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		6E62EECC2C3717AC008205B4 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				6E62EED22C37184E008205B4 /* RegisterViewModel.swift */,
-			);
-			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,8 +464,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0879B82C37125E00530B06 /* Preview Assets.xcassets in Resources */,
-				6E0879B42C37125E00530B06 /* Assets.xcassets in Resources */,
+				4203A5442C3D9F8D0099E0ED /* Assets.xcassets in Resources */,
+				4203A5432C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,25 +490,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0879B22C37125D00530B06 /* ContentView.swift in Sources */,
 				42E324EA2C39264D0072A137 /* URLReponse+Extension.swift in Sources */,
+				4203A53B2C3D9F7C0099E0ED /* RootView.swift in Sources */,
+				4203A5382C3D9F7C0099E0ED /* RegisterView.swift in Sources */,
 				42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */,
 				42E324EF2C39278D0072A137 /* NetworkRequestLogin.swift in Sources */,
+				4203A5342C3D9F7C0099E0ED /* HomeViewModel.swift in Sources */,
+				4203A5352C3D9F7C0099E0ED /* LoadingView.swift in Sources */,
+				4203A5332C3D9F7C0099E0ED /* HomeView.swift in Sources */,
 				42E324DF2C3924030072A137 /* HTTPHeader.swift in Sources */,
 				42E324E32C3924200072A137 /* HTTPResponseCodes.swift in Sources */,
-				6E62EED12C371840008205B4 /* HomeViewModel.swift in Sources */,
 				42E324E52C39242E0072A137 /* HTTPEndPoints.swift in Sources */,
 				42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */,
-				6E62EED32C37184E008205B4 /* RegisterViewModel.swift in Sources */,
-				6E62EECF2C371836008205B4 /* LoginViewModel.swift in Sources */,
 				42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */,
 				42E324DB2C3923E70072A137 /* NetworError.swift in Sources */,
+				4203A5362C3D9F7C0099E0ED /* LoginView.swift in Sources */,
 				42E324ED2C3926A70072A137 /* ConstantsApp.swift in Sources */,
+				4203A53A2C3D9F7C0099E0ED /* RootStatus.swift in Sources */,
 				42E324E72C3925B40072A137 /* NetworkLogin.swift in Sources */,
-				6E62EED52C371856008205B4 /* RootViewModel.swift in Sources */,
-				6E0879B02C37125D00530B06 /* ServiHubApp.swift in Sources */,
+				4203A5452C3D9F8D0099E0ED /* ServiHubApp.swift in Sources */,
+				4203A5392C3D9F7C0099E0ED /* RegisterViewModel.swift in Sources */,
 				42E324E12C39240F0072A137 /* HTTPMethods.swift in Sources */,
 				42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */,
+				4203A5372C3D9F7C0099E0ED /* LoginViewModel.swift in Sources */,
+				4203A53C2C3D9F7C0099E0ED /* RootViewModel.swift in Sources */,
 				42E324F32C3928040072A137 /* LoginRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,9 +673,11 @@
 				CODE_SIGN_ENTITLEMENTS = ServiHub/ServiHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App\"";
+				DEVELOPMENT_TEAM = L6V6H2LAL2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ServiHub/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -678,9 +712,11 @@
 				CODE_SIGN_ENTITLEMENTS = ServiHub/ServiHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App\"";
+				DEVELOPMENT_TEAM = L6V6H2LAL2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ServiHub/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
