@@ -8,7 +8,7 @@
 //MARK: - Creamos estados para el rootView
 import Foundation
 
-enum Status {
+enum RootStatus {
     case initial
     case loading
     case loaded

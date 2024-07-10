@@ -15,7 +15,7 @@ struct RootView: View {
     
     var body: some View {
 
-        switch(vm.status){
+        switch(vm.rootStatus){
         case .initial:
             // Vista de login
             LoginView()

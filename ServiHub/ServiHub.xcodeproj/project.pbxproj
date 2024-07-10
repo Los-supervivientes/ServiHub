@@ -202,18 +202,10 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		52D990282C3F04A7007A1EEC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		52D9902B2C3F04A7007A1EEC /* App */ = {
 			isa = PBXGroup;
 			children = (
 				52D990272C3F04A7007A1EEC /* Fonts */,
-				52D990282C3F04A7007A1EEC /* Preview Content */,
 				52D990292C3F04A7007A1EEC /* Assets.xcassets */,
 				52D9902A2C3F04A7007A1EEC /* ServiHubApp.swift */,
 			);
@@ -224,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				52D9902F2C3F04B6007A1EEC /* HomeView.swift */,
-				52D990302C3F04B6007A1EEC /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -241,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				52D990342C3F04B6007A1EEC /* LoginView.swift */,
-				52D990352C3F04B6007A1EEC /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -250,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				52D990372C3F04B6007A1EEC /* RegisterView.swift */,
-				52D990382C3F04B6007A1EEC /* RegisterViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -273,8 +262,19 @@
 				52D990362C3F04B6007A1EEC /* Login */,
 				52D990392C3F04B6007A1EEC /* Register */,
 				52D9903D2C3F04B6007A1EEC /* Root */,
+				52D9904A2C3F116B007A1EEC /* ViewModel */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		52D9904A2C3F116B007A1EEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52D990302C3F04B6007A1EEC /* HomeViewModel.swift */,
+				52D990352C3F04B6007A1EEC /* LoginViewModel.swift */,
+				52D990382C3F04B6007A1EEC /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		6E0879A32C37125D00530B06 = {
