@@ -7,19 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4203A5332C3D9F7C0099E0ED /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5232C3D9F7C0099E0ED /* HomeView.swift */; };
-		4203A5342C3D9F7C0099E0ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5242C3D9F7C0099E0ED /* HomeViewModel.swift */; };
-		4203A5352C3D9F7C0099E0ED /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5262C3D9F7C0099E0ED /* LoadingView.swift */; };
-		4203A5362C3D9F7C0099E0ED /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5282C3D9F7C0099E0ED /* LoginView.swift */; };
-		4203A5372C3D9F7C0099E0ED /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5292C3D9F7C0099E0ED /* LoginViewModel.swift */; };
-		4203A5382C3D9F7C0099E0ED /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A52B2C3D9F7C0099E0ED /* RegisterView.swift */; };
-		4203A5392C3D9F7C0099E0ED /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A52C2C3D9F7C0099E0ED /* RegisterViewModel.swift */; };
-		4203A53A2C3D9F7C0099E0ED /* RootStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A52E2C3D9F7C0099E0ED /* RootStatus.swift */; };
-		4203A53B2C3D9F7C0099E0ED /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A52F2C3D9F7C0099E0ED /* RootView.swift */; };
-		4203A53C2C3D9F7C0099E0ED /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5302C3D9F7C0099E0ED /* RootViewModel.swift */; };
-		4203A5432C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4203A53D2C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf */; };
-		4203A5442C3D9F8D0099E0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4203A5402C3D9F8D0099E0ED /* Assets.xcassets */; };
-		4203A5452C3D9F8D0099E0ED /* ServiHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A5412C3D9F8D0099E0ED /* ServiHubApp.swift */; };
 		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
 		42E324DB2C3923E70072A137 /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DA2C3923E70072A137 /* NetworError.swift */; };
 		42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */; };
@@ -35,10 +22,23 @@
 		42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */; };
 		42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324F72C392C490072A137 /* LoginUseCase.swift */; };
 		42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324FA2C3937500072A137 /* SecureDataKeychain.swift */; };
+		52D421442C3EFCE2005016F3 /* Grandstander-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52D4213E2C3EFCE2005016F3 /* Grandstander-VariableFont_wght.ttf */; };
+		52D421452C3EFCE2005016F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D421412C3EFCE2005016F3 /* Assets.xcassets */; };
+		52D421462C3EFCE2005016F3 /* ServiHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D421422C3EFCE2005016F3 /* ServiHubApp.swift */; };
+		52D421572C3EFCEC005016F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D421472C3EFCEC005016F3 /* HomeView.swift */; };
+		52D421582C3EFCEC005016F3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D421482C3EFCEC005016F3 /* HomeViewModel.swift */; };
+		52D421592C3EFCEC005016F3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4214A2C3EFCEC005016F3 /* LoadingView.swift */; };
+		52D4215A2C3EFCEC005016F3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4214C2C3EFCEC005016F3 /* LoginView.swift */; };
+		52D4215B2C3EFCEC005016F3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4214D2C3EFCEC005016F3 /* LoginViewModel.swift */; };
+		52D4215C2C3EFCEC005016F3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4214F2C3EFCEC005016F3 /* RegisterView.swift */; };
+		52D4215D2C3EFCEC005016F3 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D421502C3EFCEC005016F3 /* RegisterViewModel.swift */; };
+		52D4215E2C3EFCEC005016F3 /* RootStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D421522C3EFCEC005016F3 /* RootStatus.swift */; };
+		52D4215F2C3EFCEC005016F3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D421532C3EFCEC005016F3 /* RootView.swift */; };
+		52D421602C3EFCEC005016F3 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D421542C3EFCEC005016F3 /* RootViewModel.swift */; };
+		52EC73D22C3EFFF700FF4226 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52EC73D12C3EFFF700FF4226 /* KeychainSwift */; };
 		6E0879C22C37125E00530B06 /* ServiHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879C12C37125E00530B06 /* ServiHubTests.swift */; };
 		6E0879CC2C37125E00530B06 /* ServiHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */; };
 		6E0879CE2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */; };
-		6E0879DD2C37130900530B06 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E0879DC2C37130900530B06 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,19 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4203A5232C3D9F7C0099E0ED /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		4203A5242C3D9F7C0099E0ED /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		4203A5262C3D9F7C0099E0ED /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		4203A5282C3D9F7C0099E0ED /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		4203A5292C3D9F7C0099E0ED /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		4203A52B2C3D9F7C0099E0ED /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		4203A52C2C3D9F7C0099E0ED /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		4203A52E2C3D9F7C0099E0ED /* RootStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootStatus.swift; sourceTree = "<group>"; };
-		4203A52F2C3D9F7C0099E0ED /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		4203A5302C3D9F7C0099E0ED /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
-		4203A53D2C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		4203A5402C3D9F8D0099E0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4203A5412C3D9F8D0099E0ED /* ServiHubApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiHubApp.swift; sourceTree = "<group>"; };
 		4203A5482C3DA0AF0099E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		42E324DA2C3923E70072A137 /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthentication.swift; sourceTree = "<group>"; };
@@ -87,6 +74,19 @@
 		42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
 		42E324F72C392C490072A137 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		42E324FA2C3937500072A137 /* SecureDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataKeychain.swift; sourceTree = "<group>"; };
+		52D4213E2C3EFCE2005016F3 /* Grandstander-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		52D421412C3EFCE2005016F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52D421422C3EFCE2005016F3 /* ServiHubApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiHubApp.swift; sourceTree = "<group>"; };
+		52D421472C3EFCEC005016F3 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		52D421482C3EFCEC005016F3 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		52D4214A2C3EFCEC005016F3 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		52D4214C2C3EFCEC005016F3 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		52D4214D2C3EFCEC005016F3 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		52D4214F2C3EFCEC005016F3 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		52D421502C3EFCEC005016F3 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		52D421522C3EFCEC005016F3 /* RootStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootStatus.swift; sourceTree = "<group>"; };
+		52D421532C3EFCEC005016F3 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		52D421542C3EFCEC005016F3 /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		6E0879AC2C37125D00530B06 /* ServiHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0879B52C37125E00530B06 /* ServiHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServiHub.entitlements; sourceTree = "<group>"; };
 		6E0879BD2C37125E00530B06 /* ServiHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0879DD2C37130900530B06 /* KeychainSwift in Frameworks */,
+				52EC73D22C3EFFF700FF4226 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,83 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4203A5252C3D9F7C0099E0ED /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				4203A5232C3D9F7C0099E0ED /* HomeView.swift */,
-				4203A5242C3D9F7C0099E0ED /* HomeViewModel.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		4203A5272C3D9F7C0099E0ED /* Loading */ = {
-			isa = PBXGroup;
-			children = (
-				4203A5262C3D9F7C0099E0ED /* LoadingView.swift */,
-			);
-			path = Loading;
-			sourceTree = "<group>";
-		};
-		4203A52A2C3D9F7C0099E0ED /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4203A5282C3D9F7C0099E0ED /* LoginView.swift */,
-				4203A5292C3D9F7C0099E0ED /* LoginViewModel.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		4203A52D2C3D9F7C0099E0ED /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				4203A52B2C3D9F7C0099E0ED /* RegisterView.swift */,
-				4203A52C2C3D9F7C0099E0ED /* RegisterViewModel.swift */,
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
-		4203A5312C3D9F7C0099E0ED /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				4203A52E2C3D9F7C0099E0ED /* RootStatus.swift */,
-				4203A52F2C3D9F7C0099E0ED /* RootView.swift */,
-				4203A5302C3D9F7C0099E0ED /* RootViewModel.swift */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
-		4203A5322C3D9F7C0099E0ED /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				4203A5252C3D9F7C0099E0ED /* Home */,
-				4203A5272C3D9F7C0099E0ED /* Loading */,
-				4203A52A2C3D9F7C0099E0ED /* Login */,
-				4203A52D2C3D9F7C0099E0ED /* Register */,
-				4203A5312C3D9F7C0099E0ED /* Root */,
-			);
-			name = Presentation;
-			path = ../../../../Downloads/ServiHub/ServiHub/ServiHub/Presentation;
-			sourceTree = "<group>";
-		};
-		4203A53E2C3D9F8D0099E0ED /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				4203A53D2C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		4203A5422C3D9F8D0099E0ED /* App */ = {
-			isa = PBXGroup;
-			children = (
-				4203A53E2C3D9F8D0099E0ED /* Fonts */,
-				4203A5402C3D9F8D0099E0ED /* Assets.xcassets */,
-				4203A5412C3D9F8D0099E0ED /* ServiHubApp.swift */,
-			);
-			name = App;
-			path = ../../../../Downloads/ServiHub/ServiHub/ServiHub/App;
-			sourceTree = "<group>";
-		};
 		42E324D62C3923430072A137 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +194,91 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		52D4213F2C3EFCE2005016F3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52D4213E2C3EFCE2005016F3 /* Grandstander-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		52D421402C3EFCE2005016F3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52D421432C3EFCE2005016F3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52D4213F2C3EFCE2005016F3 /* Fonts */,
+				52D421402C3EFCE2005016F3 /* Preview Content */,
+				52D421412C3EFCE2005016F3 /* Assets.xcassets */,
+				52D421422C3EFCE2005016F3 /* ServiHubApp.swift */,
+			);
+			name = App;
+			path = ../../../ServiHub_v00/ServiHub/ServiHub/App;
+			sourceTree = "<group>";
+		};
+		52D421492C3EFCEC005016F3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				52D421472C3EFCEC005016F3 /* HomeView.swift */,
+				52D421482C3EFCEC005016F3 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		52D4214B2C3EFCEC005016F3 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				52D4214A2C3EFCEC005016F3 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		52D4214E2C3EFCEC005016F3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				52D4214C2C3EFCEC005016F3 /* LoginView.swift */,
+				52D4214D2C3EFCEC005016F3 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		52D421512C3EFCEC005016F3 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				52D4214F2C3EFCEC005016F3 /* RegisterView.swift */,
+				52D421502C3EFCEC005016F3 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		52D421552C3EFCEC005016F3 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				52D421522C3EFCEC005016F3 /* RootStatus.swift */,
+				52D421532C3EFCEC005016F3 /* RootView.swift */,
+				52D421542C3EFCEC005016F3 /* RootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		52D421562C3EFCEC005016F3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				52D421492C3EFCEC005016F3 /* Home */,
+				52D4214B2C3EFCEC005016F3 /* Loading */,
+				52D4214E2C3EFCEC005016F3 /* Login */,
+				52D421512C3EFCEC005016F3 /* Register */,
+				52D421552C3EFCEC005016F3 /* Root */,
+			);
+			name = Presentation;
+			path = ../../../ServiHub_v00/ServiHub/ServiHub/Presentation;
+			sourceTree = "<group>";
+		};
 		6E0879A32C37125D00530B06 = {
 			isa = PBXGroup;
 			children = (
@@ -296,8 +304,8 @@
 			children = (
 				4203A5482C3DA0AF0099E0ED /* Info.plist */,
 				6E0879B52C37125E00530B06 /* ServiHub.entitlements */,
-				4203A5422C3D9F8D0099E0ED /* App */,
-				4203A5322C3D9F7C0099E0ED /* Presentation */,
+				52D421432C3EFCE2005016F3 /* App */,
+				52D421562C3EFCEC005016F3 /* Presentation */,
 				6E62EEBC2C3716CC008205B4 /* Domain */,
 				6E62EEBB2C3716C1008205B4 /* Data */,
 			);
@@ -367,7 +375,7 @@
 			);
 			name = ServiHub;
 			packageProductDependencies = (
-				6E0879DC2C37130900530B06 /* KeychainSwift */,
+				52EC73D12C3EFFF700FF4226 /* KeychainSwift */,
 			);
 			productName = ServiHub;
 			productReference = 6E0879AC2C37125D00530B06 /* ServiHub.app */;
@@ -445,8 +453,8 @@
 			);
 			mainGroup = 6E0879A32C37125D00530B06;
 			packageReferences = (
-				6E0879DB2C37130900530B06 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				52EC73D02C3EFFF700FF4226 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 6E0879AD2C37125D00530B06 /* Products */;
 			projectDirPath = "";
@@ -464,8 +472,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4203A5442C3D9F8D0099E0ED /* Assets.xcassets in Resources */,
-				4203A5432C3D9F8D0099E0ED /* Grandstander-VariableFont_wght.ttf in Resources */,
+				52D421452C3EFCE2005016F3 /* Assets.xcassets in Resources */,
+				52D421442C3EFCE2005016F3 /* Grandstander-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,31 +498,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D421582C3EFCEC005016F3 /* HomeViewModel.swift in Sources */,
+				52D4215E2C3EFCEC005016F3 /* RootStatus.swift in Sources */,
 				42E324EA2C39264D0072A137 /* URLReponse+Extension.swift in Sources */,
-				4203A53B2C3D9F7C0099E0ED /* RootView.swift in Sources */,
-				4203A5382C3D9F7C0099E0ED /* RegisterView.swift in Sources */,
 				42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */,
+				52D4215C2C3EFCEC005016F3 /* RegisterView.swift in Sources */,
 				42E324EF2C39278D0072A137 /* NetworkRequestLogin.swift in Sources */,
-				4203A5342C3D9F7C0099E0ED /* HomeViewModel.swift in Sources */,
-				4203A5352C3D9F7C0099E0ED /* LoadingView.swift in Sources */,
-				4203A5332C3D9F7C0099E0ED /* HomeView.swift in Sources */,
 				42E324DF2C3924030072A137 /* HTTPHeader.swift in Sources */,
 				42E324E32C3924200072A137 /* HTTPResponseCodes.swift in Sources */,
+				52D4215F2C3EFCEC005016F3 /* RootView.swift in Sources */,
 				42E324E52C39242E0072A137 /* HTTPEndPoints.swift in Sources */,
 				42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */,
+				52D4215B2C3EFCEC005016F3 /* LoginViewModel.swift in Sources */,
 				42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */,
+				52D421462C3EFCE2005016F3 /* ServiHubApp.swift in Sources */,
 				42E324DB2C3923E70072A137 /* NetworError.swift in Sources */,
-				4203A5362C3D9F7C0099E0ED /* LoginView.swift in Sources */,
 				42E324ED2C3926A70072A137 /* ConstantsApp.swift in Sources */,
-				4203A53A2C3D9F7C0099E0ED /* RootStatus.swift in Sources */,
 				42E324E72C3925B40072A137 /* NetworkLogin.swift in Sources */,
-				4203A5452C3D9F8D0099E0ED /* ServiHubApp.swift in Sources */,
-				4203A5392C3D9F7C0099E0ED /* RegisterViewModel.swift in Sources */,
+				52D4215D2C3EFCEC005016F3 /* RegisterViewModel.swift in Sources */,
 				42E324E12C39240F0072A137 /* HTTPMethods.swift in Sources */,
+				52D421572C3EFCEC005016F3 /* HomeView.swift in Sources */,
+				52D421602C3EFCEC005016F3 /* RootViewModel.swift in Sources */,
 				42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */,
-				4203A5372C3D9F7C0099E0ED /* LoginViewModel.swift in Sources */,
-				4203A53C2C3D9F7C0099E0ED /* RootViewModel.swift in Sources */,
+				52D4215A2C3EFCEC005016F3 /* LoginView.swift in Sources */,
 				42E324F32C3928040072A137 /* LoginRepository.swift in Sources */,
+				52D421592C3EFCEC005016F3 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,7 +887,7 @@
 				version = 0.9.11;
 			};
 		};
-		6E0879DB2C37130900530B06 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+		52EC73D02C3EFFF700FF4226 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
 			requirement = {
@@ -895,9 +903,9 @@
 			package = 42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
 		};
-		6E0879DC2C37130900530B06 /* KeychainSwift */ = {
+		52EC73D12C3EFFF700FF4226 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6E0879DB2C37130900530B06 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			package = 52EC73D02C3EFFF700FF4226 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
