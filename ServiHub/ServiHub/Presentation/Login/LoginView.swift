@@ -12,8 +12,8 @@ struct LoginView: View {
     
     @EnvironmentObject var rootViewModel: RootViewModel
     //Asignamos variables de prueba
-    @State private var email = "test@gmail.com"
-    @State private var password = "1234"
+    @State private var email = "die_94_gohotmail.com"
+    @State private var password = "1"
     
     var body: some View {
         ZStack{
@@ -66,7 +66,7 @@ struct LoginView: View {
                     ///Botón de login
                     Button {
                         //Hacemos login en el VM
-                        //                        rootViewModel.login(user: email, password: password)
+                        rootViewModel.onLoginButton(email: email, password: password)
                         
                     } label: {
                         
@@ -93,7 +93,7 @@ struct LoginView: View {
                         
                         Button(action: {
                             //Cambiamos a la pantalla de degistro
-                            self.rootViewModel.status = .register
+                            self.rootViewModel.rootStatus = .register
                         }, label: {
                             Text("Registrate")
                                 .foregroundStyle(.blue)

@@ -25,7 +25,7 @@ struct RegisterView: View {
                         Button {
                            //Enviamos los datos y volvemos al login
                             
-                            self.rootViewModel.status =  .initial
+                            self.rootViewModel.rootStatus =  .initial
                         } label: {
                             
                             ///Definimos las propiedades del botón de registrame
