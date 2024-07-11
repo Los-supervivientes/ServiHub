@@ -11,7 +11,7 @@ import SwiftUI
 
 struct RootView: View {
     
-    @EnvironmentObject var vm: RootViewModel
+    @EnvironmentObject var vm: LoginViewModel
     
     var body: some View {
 
@@ -25,9 +25,6 @@ struct RootView: View {
         case .register:
             // Vista registro usuario/empresa
             RegisterView()
-        case .error(error: let errorString):
-//            ErrorView(error: errorString)
-            Text("Error")
         case .loaded:
             // Vista pantalla home
             HomeView()
@@ -39,5 +36,5 @@ struct RootView: View {
 
 #Preview {
     RootView()
-        .environmentObject(RootViewModel())
+        .environmentObject(LoginViewModel())
 }

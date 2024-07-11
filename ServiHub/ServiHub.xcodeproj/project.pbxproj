@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		422BB1B12C3F1FC50027BBE9 /* pruebaintegracion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BB1B02C3F1FC50027BBE9 /* pruebaintegracion.swift */; };
 		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
 		42E324DB2C3923E70072A137 /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DA2C3923E70072A137 /* NetworError.swift */; };
 		42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */; };
@@ -35,7 +34,6 @@
 		52D990452C3F04B6007A1EEC /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D990382C3F04B6007A1EEC /* RegisterViewModel.swift */; };
 		52D990462C3F04B6007A1EEC /* RootStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9903A2C3F04B6007A1EEC /* RootStatus.swift */; };
 		52D990472C3F04B6007A1EEC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9903B2C3F04B6007A1EEC /* RootView.swift */; };
-		52D990482C3F04B6007A1EEC /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9903C2C3F04B6007A1EEC /* RootViewModel.swift */; };
 		52EC73D22C3EFFF700FF4226 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52EC73D12C3EFFF700FF4226 /* KeychainSwift */; };
 		6E0879C22C37125E00530B06 /* ServiHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879C12C37125E00530B06 /* ServiHubTests.swift */; };
 		6E0879CC2C37125E00530B06 /* ServiHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */; };
@@ -61,7 +59,6 @@
 
 /* Begin PBXFileReference section */
 		4203A5482C3DA0AF0099E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		422BB1B02C3F1FC50027BBE9 /* pruebaintegracion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebaintegracion.swift; sourceTree = "<group>"; };
 		42E324DA2C3923E70072A137 /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthentication.swift; sourceTree = "<group>"; };
 		42E324DE2C3924030072A137 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
@@ -88,7 +85,6 @@
 		52D990382C3F04B6007A1EEC /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		52D9903A2C3F04B6007A1EEC /* RootStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootStatus.swift; sourceTree = "<group>"; };
 		52D9903B2C3F04B6007A1EEC /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		52D9903C2C3F04B6007A1EEC /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		6E0879AC2C37125D00530B06 /* ServiHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0879B52C37125E00530B06 /* ServiHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ServiHub.entitlements; sourceTree = "<group>"; };
 		6E0879BD2C37125E00530B06 /* ServiHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +247,6 @@
 			children = (
 				52D9903A2C3F04B6007A1EEC /* RootStatus.swift */,
 				52D9903B2C3F04B6007A1EEC /* RootView.swift */,
-				52D9903C2C3F04B6007A1EEC /* RootViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -346,7 +341,6 @@
 				42E324EB2C39267D0072A137 /* Tools */,
 				42E324E82C3926360072A137 /* Extensions */,
 				6E62EEC72C371769008205B4 /* Protocols */,
-				422BB1B02C3F1FC50027BBE9 /* pruebaintegracion.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -509,7 +503,6 @@
 				42E324E32C3924200072A137 /* HTTPResponseCodes.swift in Sources */,
 				52D990472C3F04B6007A1EEC /* RootView.swift in Sources */,
 				42E324E52C39242E0072A137 /* HTTPEndPoints.swift in Sources */,
-				422BB1B12C3F1FC50027BBE9 /* pruebaintegracion.swift in Sources */,
 				42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */,
 				52D990432C3F04B6007A1EEC /* LoginViewModel.swift in Sources */,
 				42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */,
@@ -520,7 +513,6 @@
 				52D990452C3F04B6007A1EEC /* RegisterViewModel.swift in Sources */,
 				42E324E12C39240F0072A137 /* HTTPMethods.swift in Sources */,
 				52D9903F2C3F04B6007A1EEC /* HomeView.swift in Sources */,
-				52D990482C3F04B6007A1EEC /* RootViewModel.swift in Sources */,
 				42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */,
 				52D990422C3F04B6007A1EEC /* LoginView.swift in Sources */,
 				42E324F32C3928040072A137 /* LoginRepository.swift in Sources */,

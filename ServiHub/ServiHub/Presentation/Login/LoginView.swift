@@ -10,10 +10,12 @@ import SwiftUI
 //MARK: - LoginView
 struct LoginView: View {
     
-    @EnvironmentObject var rootViewModel: RootViewModel
+    @EnvironmentObject var rootViewModel: LoginViewModel
     //Asignamos variables de prueba
-    @State private var email = "die_94_gohotmail.com"
-    @State private var password = "1"
+    @State private var email = "die_94_go@hotmail.com"
+    @State private var password = "12345678"
+    
+    @State private var error: String = ""
     
     var body: some View {
         ZStack{
@@ -66,7 +68,7 @@ struct LoginView: View {
                     ///Botón de login
                     Button {
                         //Hacemos login en el VM
-                        rootViewModel.onLoginButton(email: email, password: password)
+                        self.error = rootViewModel.onLoginButton(email: email, password: password)
                         
                     } label: {
                         
@@ -99,6 +101,15 @@ struct LoginView: View {
                                 .foregroundStyle(.blue)
                         })
                         .id(6)
+                    }
+                    .padding(.top, 20)
+                    
+                    
+                    HStack{
+                        if !self.error.isEmpty {
+                            Text(self.error)
+                                .foregroundStyle(.red)
+                        }
                     }
                     .padding(.top, 20)
                     

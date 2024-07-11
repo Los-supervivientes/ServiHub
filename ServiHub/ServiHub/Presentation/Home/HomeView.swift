@@ -10,7 +10,7 @@ import SwiftUI
 //MARK: - Pantalla de Home
 
 struct HomeView: View {
-    @EnvironmentObject var rootViewModel: RootViewModel
+    @EnvironmentObject var rootViewModel: LoginViewModel
     
     var body: some View {
         

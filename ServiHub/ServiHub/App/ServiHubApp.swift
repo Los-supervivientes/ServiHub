@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ServiHubApp: App {
-    @StateObject var rootViewModel = RootViewModel()
+    @StateObject var rootViewModel = LoginViewModel()
     
     var body: some Scene {
         WindowGroup {

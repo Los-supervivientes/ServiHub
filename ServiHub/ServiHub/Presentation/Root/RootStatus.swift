@@ -13,5 +13,5 @@ enum RootStatus {
     case loading
     case loaded
     case register
-    case error(error: String)
+
 }
