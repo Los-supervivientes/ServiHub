@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  ServiHub
 //
-//  Created by Macbook Pro on 7/7/24.
+//  Created Diego Andrades on 7/7/24.
 //
 
 import SwiftUI

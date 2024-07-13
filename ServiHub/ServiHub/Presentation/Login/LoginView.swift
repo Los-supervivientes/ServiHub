@@ -2,7 +2,7 @@
 //  LoginView.swift
 //  ServiHub
 //
-//  Created by EquipoSupervivientes!! on 4/7/24.
+//  Created by Diego Andrades on 4/7/24.
 //
 
 import SwiftUI
