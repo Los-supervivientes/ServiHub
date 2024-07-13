@@ -2,7 +2,7 @@
 //  LoadingView.swift
 //  ServiHub
 //
-//  Created by EquipoSupervivientes!! on 4/7/24.
+//  Created by Diego Andrades on 4/7/24.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ struct LoadingView: View {
     var body: some View {
         ZStack{
             ///Imagen de fondo
-            Image(.fondoLogin)
+            Image(.fondoLoading)
                 .resizable()
                 .id(1)
             VStack{
@@ -22,7 +22,7 @@ struct LoadingView: View {
                     ///Imagen logo
                     Image(.logo)
                         .resizable()
-                        .frame(width: 200, height: 200)
+                        .frame(width: 164, height: 165)
                         .foregroundColor(.white)
                         .padding()
                         .id(2)
@@ -38,8 +38,9 @@ struct LoadingView: View {
                 Text("Loading...")
                             .foregroundColor(Color(red: 161/255, green: 158/255, blue: 198/255))
                             .padding()
-                            .font(.custom("Grandstander-VariableFont_wght.ttf", size: 24))
-//                            .font(.title)
+                            .font(Font.custom("Grandstander-Italic-VariableFont_wght", size: 18))
+                           
+
             }
         }
         .ignoresSafeArea()

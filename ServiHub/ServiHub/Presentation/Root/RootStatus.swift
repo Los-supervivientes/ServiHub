@@ -2,7 +2,7 @@
 //  RootStatus.swift
 //  ServiHub
 //
-//  Created by EquipoSupervivientes!! on 4/7/24.
+//  Created by Diego Andrades on 4/7/24.
 //
 
 //MARK: - Creamos estados para el rootView
@@ -13,5 +13,5 @@ enum RootStatus {
     case loading
     case loaded
     case register
-    case error(error: String)
+
 }

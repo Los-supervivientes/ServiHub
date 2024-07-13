@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "1x fondoLogin.png",
+      "filename" : "1x FondoLoading.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "2x fondoLoginpng.png",
+      "filename" : "2x FondoLoading.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "3x fondoLogin.png",
+      "filename" : "3x FondoLoading.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

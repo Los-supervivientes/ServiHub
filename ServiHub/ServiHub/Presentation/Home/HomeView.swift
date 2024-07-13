@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  ServiHub
 //
-//  Created by Macbook Pro on 7/7/24.
+//  Created Diego Andrades on 7/7/24.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SwiftUI
 //MARK: - Pantalla de Home
 
 struct HomeView: View {
-    @EnvironmentObject var rootViewModel: RootViewModel
+    @EnvironmentObject var rootViewModel: LoginViewModel
     
     var body: some View {
         
