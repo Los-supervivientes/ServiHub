@@ -14,8 +14,12 @@ struct LoginView: View {
     //Asignamos variables de prueba
     @State private var email = "die_94_go@hotmail.com"
     @State private var password = "12345678"
-    
     @State private var error: String = ""
+    
+    private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
+    private let colorLightUB = Color(red: 227/255, green: 252/255, blue: 255/255)
+
+    
     
     var body: some View {
         ZStack{
@@ -33,7 +37,7 @@ struct LoginView: View {
                         ///Imagen logo
                         Image(.logo)
                             .resizable()
-                            .frame(width: 200, height: 200)
+                            .frame(width: 164, height: 165)
                             .foregroundColor(.white)
                             .padding()
                             .id(2)
@@ -43,25 +47,34 @@ struct LoginView: View {
                     ///Campo de texto para añadir el email
                     TextField("Email", text: self.$email)
                         .padding()
-                        .background(.white)
-                        .foregroundStyle(.blue)
+                        .background(self.colorLightUB)
+                        .foregroundStyle(self.secundaryColor)
+                        .frame(width: 325, height: 35)
                         .cornerRadius(10)
                         .autocorrectionDisabled()
                         .shadow(radius: 10, x: 20, y: 10)
                         .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+                        .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(self.secundaryColor, lineWidth: 2))
+                        .padding(.top, 97)
                         .id(3)
                     
                     
                     ///Campo de texto para añadir la password
                     SecureField("Password", text: self.$password)
                         .padding()
-                        .background(.white)
-                        .foregroundStyle(.blue)
+                        .background(self.colorLightUB)
+                        .foregroundStyle(self.secundaryColor)
+                        .frame(width: 325, height: 35)
                         .cornerRadius(10)
                         .autocorrectionDisabled()
                         .shadow(radius: 10, x: 20, y: 10)
                         .opacity(0.8)
-                        .padding(.top, 25)
+                        .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(self.secundaryColor, lineWidth: 2))
+                        .padding(.top, 16)
                         .id(4)
                     
                    
@@ -73,36 +86,33 @@ struct LoginView: View {
                     } label: {
                         
                         ///Definimos las propiedades del botón login
-                        Text("Entrar")
+                        Text("Login")
                             .font(.title2)
                             .foregroundStyle(.white)
-                            .frame(width: 300, height: 50)
-                            .background(Color(red: 0, green: 0, blue: 96))
+                            .frame(width: 202, height: 50)
+                            .background(self.secundaryColor)
                             .cornerRadius(10)
                             .shadow(radius: 10,x:10, y:10)
                             
                     }
-                    .padding(.top, 50)
+                    .padding(.top, 32)
                     .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
                     .id(5)
                     
                     
                     ///Boton para ir a la pantalla de registro
-                    HStack{
-                        Text("¿No tienes cuenta?")
-                            .foregroundStyle(.white)
-                            .bold()
-                        
+                    VStack{
                         Button(action: {
                             //Cambiamos a la pantalla de degistro
                             self.rootViewModel.rootStatus = .register
                         }, label: {
-                            Text("Registrate")
-                                .foregroundStyle(.blue)
+                            Text("or Register here")
+                                .underline()
+                                .foregroundStyle(Color(red: 122/255, green: 154/255, blue: 199/255))
                         })
                         .id(6)
                     }
-                    .padding(.top, 20)
+                    .padding(.top, 16)
                     
                     
                     HStack{

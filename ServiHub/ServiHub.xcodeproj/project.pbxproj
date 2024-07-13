@@ -22,7 +22,7 @@
 		42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */; };
 		42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324F72C392C490072A137 /* LoginUseCase.swift */; };
 		42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324FA2C3937500072A137 /* SecureDataKeychain.swift */; };
-		52D9902C2C3F04A7007A1EEC /* Grandstander-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52D990262C3F04A7007A1EEC /* Grandstander-VariableFont_wght.ttf */; };
+		525FB2182C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 525FB2172C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf */; };
 		52D9902D2C3F04A7007A1EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D990292C3F04A7007A1EEC /* Assets.xcassets */; };
 		52D9902E2C3F04A7007A1EEC /* ServiHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9902A2C3F04A7007A1EEC /* ServiHubApp.swift */; };
 		52D9903F2C3F04B6007A1EEC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9902F2C3F04B6007A1EEC /* HomeView.swift */; };
@@ -58,7 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4203A5482C3DA0AF0099E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4203A5482C3DA0AF0099E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42E324DA2C3923E70072A137 /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthentication.swift; sourceTree = "<group>"; };
 		42E324DE2C3924030072A137 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
 		42E324F72C392C490072A137 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		42E324FA2C3937500072A137 /* SecureDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataKeychain.swift; sourceTree = "<group>"; };
-		52D990262C3F04A7007A1EEC /* Grandstander-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		525FB2172C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		52D990292C3F04A7007A1EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D9902A2C3F04A7007A1EEC /* ServiHubApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiHubApp.swift; sourceTree = "<group>"; };
 		52D9902F2C3F04B6007A1EEC /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		52D990272C3F04A7007A1EEC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				52D990262C3F04A7007A1EEC /* Grandstander-VariableFont_wght.ttf */,
+				525FB2172C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -468,7 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D9902D2C3F04A7007A1EEC /* Assets.xcassets in Resources */,
-				52D9902C2C3F04A7007A1EEC /* Grandstander-VariableFont_wght.ttf in Resources */,
+				525FB2182C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
