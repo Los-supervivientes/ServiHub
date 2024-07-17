@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241B596F2C45C37500B003F9 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 241B596E2C45C37500B003F9 /* KeychainSwift */; };
 		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
 		42E324DB2C3923E70072A137 /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DA2C3923E70072A137 /* NetworError.swift */; };
 		42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */; };
@@ -34,7 +35,6 @@
 		52D990452C3F04B6007A1EEC /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D990382C3F04B6007A1EEC /* RegisterViewModel.swift */; };
 		52D990462C3F04B6007A1EEC /* RootStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9903A2C3F04B6007A1EEC /* RootStatus.swift */; };
 		52D990472C3F04B6007A1EEC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9903B2C3F04B6007A1EEC /* RootView.swift */; };
-		52EC73D22C3EFFF700FF4226 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52EC73D12C3EFFF700FF4226 /* KeychainSwift */; };
 		6E0879C22C37125E00530B06 /* ServiHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879C12C37125E00530B06 /* ServiHubTests.swift */; };
 		6E0879CC2C37125E00530B06 /* ServiHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */; };
 		6E0879CE2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */; };
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52EC73D22C3EFFF700FF4226 /* KeychainSwift in Frameworks */,
+				241B596F2C45C37500B003F9 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +370,7 @@
 			);
 			name = ServiHub;
 			packageProductDependencies = (
-				52EC73D12C3EFFF700FF4226 /* KeychainSwift */,
+				241B596E2C45C37500B003F9 /* KeychainSwift */,
 			);
 			productName = ServiHub;
 			productReference = 6E0879AC2C37125D00530B06 /* ServiHub.app */;
@@ -449,7 +449,7 @@
 			mainGroup = 6E0879A32C37125D00530B06;
 			packageReferences = (
 				42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */,
-				52EC73D02C3EFFF700FF4226 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				241B596D2C45C37500B003F9 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 6E0879AD2C37125D00530B06 /* Products */;
 			projectDirPath = "";
@@ -676,7 +676,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App\"";
-				DEVELOPMENT_TEAM = 8Z9R3793D9;
+				DEVELOPMENT_TEAM = LF68Z3YD8E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ServiHub/Info.plist;
@@ -715,7 +715,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App\"";
-				DEVELOPMENT_TEAM = 8Z9R3793D9;
+				DEVELOPMENT_TEAM = LF68Z3YD8E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ServiHub/Info.plist;
@@ -873,6 +873,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		241B596D2C45C37500B003F9 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
 		42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:nalexn/ViewInspector.git";
@@ -881,26 +889,18 @@
 				version = 0.9.11;
 			};
 		};
-		52EC73D02C3EFFF700FF4226 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
-			requirement = {
-				kind = exactVersion;
-				version = 24.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		241B596E2C45C37500B003F9 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 241B596D2C45C37500B003F9 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
 		42E324D42C39226B0072A137 /* ViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
-		};
-		52EC73D12C3EFFF700FF4226 /* KeychainSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52EC73D02C3EFFF700FF4226 /* XCRemoteSwiftPackageReference "keychain-swift" */;
-			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
