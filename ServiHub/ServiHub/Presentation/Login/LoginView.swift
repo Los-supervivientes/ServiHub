@@ -52,6 +52,7 @@ struct LoginView: View {
                         .frame(width: 325, height: 35)
                         .cornerRadius(10)
                         .autocorrectionDisabled()
+                        .autocapitalization(.none)
                         .shadow(radius: 10, x: 20, y: 10)
                         .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
                         .overlay(
@@ -69,6 +70,7 @@ struct LoginView: View {
                         .frame(width: 325, height: 35)
                         .cornerRadius(10)
                         .autocorrectionDisabled()
+                        .autocapitalization(.none)
                         .shadow(radius: 10, x: 20, y: 10)
                         .opacity(0.8)
                         .overlay(
