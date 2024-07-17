@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		241B596F2C45C37500B003F9 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 241B596E2C45C37500B003F9 /* KeychainSwift */; };
+		248392A32C47CCD20060CE04 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 248392A22C47CCD20060CE04 /* KeychainSwift */; };
+		248392A52C47CDA70060CE04 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392A42C47CDA70060CE04 /* HomeRepository.swift */; };
+		248392A72C47CDDD0060CE04 /* HomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392A62C47CDDD0060CE04 /* HomeRepositoryProtocol.swift */; };
+		248392A92C47CE000060CE04 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392A82C47CE000060CE04 /* HomeUseCase.swift */; };
+		248392AC2C47CED70060CE04 /* NetworkHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392AB2C47CED70060CE04 /* NetworkHome.swift */; };
+		248392AE2C47CEFD0060CE04 /* NetworkRequestHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392AD2C47CEFD0060CE04 /* NetworkRequestHome.swift */; };
 		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
 		42E324DB2C3923E70072A137 /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DA2C3923E70072A137 /* NetworError.swift */; };
 		42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */; };
@@ -58,6 +63,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		248392A42C47CDA70060CE04 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		248392A62C47CDDD0060CE04 /* HomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		248392A82C47CE000060CE04 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		248392AB2C47CED70060CE04 /* NetworkHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHome.swift; sourceTree = "<group>"; };
+		248392AD2C47CEFD0060CE04 /* NetworkRequestHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestHome.swift; sourceTree = "<group>"; };
 		4203A5482C3DA0AF0099E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42E324DA2C3923E70072A137 /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthentication.swift; sourceTree = "<group>"; };
@@ -99,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				241B596F2C45C37500B003F9 /* KeychainSwift in Frameworks */,
+				248392A32C47CCD20060CE04 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,9 +131,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		248392AA2C47CE6D0060CE04 /* HomeNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				248392AB2C47CED70060CE04 /* NetworkHome.swift */,
+				248392AD2C47CEFD0060CE04 /* NetworkRequestHome.swift */,
+			);
+			path = HomeNetwork;
+			sourceTree = "<group>";
+		};
 		42E324D62C3923430072A137 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				248392AA2C47CE6D0060CE04 /* HomeNetwork */,
 				42E324D72C39234B0072A137 /* BaseNetwork */,
 				42E324D82C3923530072A137 /* LoginNetwork */,
 			);
@@ -172,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				42E324F22C3928040072A137 /* LoginRepository.swift */,
+				248392A42C47CDA70060CE04 /* HomeRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -180,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				42E324F72C392C490072A137 /* LoginUseCase.swift */,
+				248392A82C47CE000060CE04 /* HomeUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -349,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */,
+				248392A62C47CDDD0060CE04 /* HomeRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -370,7 +393,7 @@
 			);
 			name = ServiHub;
 			packageProductDependencies = (
-				241B596E2C45C37500B003F9 /* KeychainSwift */,
+				248392A22C47CCD20060CE04 /* KeychainSwift */,
 			);
 			productName = ServiHub;
 			productReference = 6E0879AC2C37125D00530B06 /* ServiHub.app */;
@@ -449,7 +472,7 @@
 			mainGroup = 6E0879A32C37125D00530B06;
 			packageReferences = (
 				42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */,
-				241B596D2C45C37500B003F9 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				248392A12C47CCD20060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 6E0879AD2C37125D00530B06 /* Products */;
 			projectDirPath = "";
@@ -497,10 +520,12 @@
 				52D990462C3F04B6007A1EEC /* RootStatus.swift in Sources */,
 				42E324EA2C39264D0072A137 /* URLReponse+Extension.swift in Sources */,
 				42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */,
+				248392A72C47CDDD0060CE04 /* HomeRepositoryProtocol.swift in Sources */,
 				52D990442C3F04B6007A1EEC /* RegisterView.swift in Sources */,
 				42E324EF2C39278D0072A137 /* NetworkRequestLogin.swift in Sources */,
 				42E324DF2C3924030072A137 /* HTTPHeader.swift in Sources */,
 				42E324E32C3924200072A137 /* HTTPResponseCodes.swift in Sources */,
+				248392A92C47CE000060CE04 /* HomeUseCase.swift in Sources */,
 				52D990472C3F04B6007A1EEC /* RootView.swift in Sources */,
 				42E324E52C39242E0072A137 /* HTTPEndPoints.swift in Sources */,
 				42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */,
@@ -508,7 +533,9 @@
 				42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */,
 				52D9902E2C3F04A7007A1EEC /* ServiHubApp.swift in Sources */,
 				42E324DB2C3923E70072A137 /* NetworError.swift in Sources */,
+				248392A52C47CDA70060CE04 /* HomeRepository.swift in Sources */,
 				42E324ED2C3926A70072A137 /* ConstantsApp.swift in Sources */,
+				248392AC2C47CED70060CE04 /* NetworkHome.swift in Sources */,
 				42E324E72C3925B40072A137 /* NetworkLogin.swift in Sources */,
 				52D990452C3F04B6007A1EEC /* RegisterViewModel.swift in Sources */,
 				42E324E12C39240F0072A137 /* HTTPMethods.swift in Sources */,
@@ -517,6 +544,7 @@
 				52D990422C3F04B6007A1EEC /* LoginView.swift in Sources */,
 				42E324F32C3928040072A137 /* LoginRepository.swift in Sources */,
 				52D990412C3F04B6007A1EEC /* LoadingView.swift in Sources */,
+				248392AE2C47CEFD0060CE04 /* NetworkRequestHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,7 +901,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		241B596D2C45C37500B003F9 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+		248392A12C47CCD20060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
 			requirement = {
@@ -892,9 +920,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		241B596E2C45C37500B003F9 /* KeychainSwift */ = {
+		248392A22C47CCD20060CE04 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 241B596D2C45C37500B003F9 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			package = 248392A12C47CCD20060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
 		42E324D42C39226B0072A137 /* ViewInspector */ = {
