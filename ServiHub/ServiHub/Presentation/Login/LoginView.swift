@@ -16,10 +16,6 @@ struct LoginView: View {
     @State private var password = "12345678"
     @State private var error: String = ""
     
-    private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
-    private let colorLightUB = Color(red: 227/255, green: 252/255, blue: 255/255)
-
-    
     
     var body: some View {
         ZStack{
@@ -47,8 +43,8 @@ struct LoginView: View {
                     ///Campo de texto para añadir el email
                     TextField("Email", text: self.$email)
                         .padding()
-                        .background(self.colorLightUB)
-                        .foregroundStyle(self.secundaryColor)
+                        .background(CustomColor.colorLightUB)
+                        .foregroundStyle(CustomColor.secundaryColor)
                         .frame(width: 325, height: 35)
                         .cornerRadius(10)
                         .autocorrectionDisabled()
@@ -57,7 +53,7 @@ struct LoginView: View {
                         .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
                         .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(self.secundaryColor, lineWidth: 2))
+                                    .stroke(CustomColor.secundaryColor, lineWidth: 2))
                         .padding(.top, 97)
                         .id(3)
                     
@@ -65,8 +61,8 @@ struct LoginView: View {
                     ///Campo de texto para añadir la password
                     SecureField("Password", text: self.$password)
                         .padding()
-                        .background(self.colorLightUB)
-                        .foregroundStyle(self.secundaryColor)
+                        .background(CustomColor.colorLightUB)
+                        .foregroundStyle(CustomColor.secundaryColor)
                         .frame(width: 325, height: 35)
                         .cornerRadius(10)
                         .autocorrectionDisabled()
@@ -75,7 +71,7 @@ struct LoginView: View {
                         .opacity(0.8)
                         .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(self.secundaryColor, lineWidth: 2))
+                                    .stroke(CustomColor.secundaryColor, lineWidth: 2))
                         .padding(.top, 16)
                         .id(4)
                     
@@ -92,7 +88,7 @@ struct LoginView: View {
                             .font(.title2)
                             .foregroundStyle(.white)
                             .frame(width: 202, height: 50)
-                            .background(self.secundaryColor)
+                            .background(CustomColor.secundaryColor)
                             .cornerRadius(10)
                             .shadow(radius: 10,x:10, y:10)
                             

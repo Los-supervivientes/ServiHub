@@ -32,9 +32,8 @@ struct RegisterView: View {
     @State private var companyName: String = ""
     @State private var nif: String = ""
     @State private var selectedItem: Int = 0
-    @State var items: [String]
-    
 
+    private let items: [String] = ["Abogado", "Restaurante", "Gimnasio", "Peluquería", "Dentista"]
     
     
     var body: some View {
@@ -374,7 +373,7 @@ struct RegisterView: View {
 
 #Preview {
     
-    RegisterView(items: ["Abogado", "Restaurante", "Gimnasio", "Peluquería", "Dentista"])
+    RegisterView()
     // Indicamos que se muestre la vista en modo día por defecto
         .preferredColorScheme(.light)
     
