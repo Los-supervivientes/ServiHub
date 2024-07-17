@@ -31,13 +31,10 @@ struct RegisterView: View {
     @State private var categiryBusiness: String = ""
     @State private var companyName: String = ""
     @State private var nif: String = ""
-    @State private var selectedItem: String = "Apple Developer"
+    @State private var selectedItem: Int = 0
+    @State var items: [String]
     
-//    private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
-//    private let colorLightUB = Color(red: 227/255, green: 252/255, blue: 255/255)
-//    private let colorDarkBG = Color(red: 51/255, green: 75/255, blue: 108/255)
-//    private let colorPrimaryDarken = Color(red: 122/255, green: 154/255, blue: 199/255)
-    private let items: [String] = ["Abogado", "Restaurante", "Gimnasio", "Peluquería", "Dentista"]
+
     
     
     var body: some View {
@@ -165,6 +162,18 @@ struct RegisterView: View {
                         }
                         .padding(.top, 54)
                         
+                        VStack{
+                            Picker("Selecciona una opción", selection: $selectedItem) {
+                                ForEach(0..<items.count) { index in
+                                    Text(self.items[index]).tag(index)
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                            .frame(width: 326, height: 35)
+                            .background(CustomColor.colorLightUB) // Fondo blanco
+                            .cornerRadius(10)
+                        }
+                        
                         ///Campo de texto para añadir el Nombre del servicio
                         VStack {
                             CustomField(
@@ -193,7 +202,7 @@ struct RegisterView: View {
                         VStack {
                             CustomField(
                                 text: $street, // Variable
-                                icon: Image(.iconPerson), // Icono TextField
+                                icon: Image(.iconLocation), // Icono TextField
                                 placeholder: "Street", // Texto de fondo
                                 borderColor: CustomColor.secundaryColor, // Color del borde
                                 textColor: CustomColor.secundaryColor // Color del texto
@@ -206,7 +215,7 @@ struct RegisterView: View {
                         VStack {
                             CustomField(
                                 text: $city, // Variable
-                                icon: Image(.iconEmail), // Icono TextField
+                                icon: Image(.iconLocation), // Icono TextField
                                 placeholder: "City", // Texto de fondo
                                 borderColor: CustomColor.secundaryColor, // Color del borde
                                 textColor: CustomColor.secundaryColor // Color del texto
@@ -218,7 +227,7 @@ struct RegisterView: View {
                         VStack {
                             CustomField(
                                 text: $state, // Variable
-                                icon: Image(.iconLock), // Icono TextField
+                                icon: Image(.iconLocation), // Icono TextField
                                 placeholder: "State", // Texto de fondo
                                 borderColor: CustomColor.secundaryColor, // Color del borde
                                 textColor: CustomColor.secundaryColor // Color del texto
@@ -230,7 +239,7 @@ struct RegisterView: View {
                         VStack {
                             CustomField(
                                 text: $postalCode, // Variable
-                                icon: Image(.iconLock), // Icono TextField
+                                icon: Image(.iconLocation), // Icono TextField
                                 placeholder: "Postal Code", // Texto de fondo
                                 borderColor: CustomColor.secundaryColor, // Color del borde
                                 textColor: CustomColor.secundaryColor // Color del texto
@@ -242,7 +251,7 @@ struct RegisterView: View {
                         VStack {
                             CustomField(
                                 text: $country, // Variable
-                                icon: Image(.iconLock), // Icono TextField
+                                icon: Image(.iconLocation), // Icono TextField
                                 placeholder: "Country", // Texto de fondo
                                 borderColor: CustomColor.secundaryColor, // Color del borde
                                 textColor: CustomColor.secundaryColor // Color del texto
@@ -365,7 +374,7 @@ struct RegisterView: View {
 
 #Preview {
     
-    RegisterView()
+    RegisterView(items: ["Abogado", "Restaurante", "Gimnasio", "Peluquería", "Dentista"])
     // Indicamos que se muestre la vista en modo día por defecto
         .preferredColorScheme(.light)
     
