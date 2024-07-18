@@ -11,6 +11,7 @@ import SwiftUI
 struct RegisterView: View {
     
     @EnvironmentObject var rootViewModel: LoginViewModel
+    @StateObject var viewModel: RegisterViewModel
     
     @State var typeUser: Bool = false
     
@@ -371,10 +372,11 @@ struct RegisterView: View {
 }
 
 
+
+
 #Preview {
-    
-    RegisterView()
+    RegisterView(viewModel: RegisterViewModel(network: CategoriesUseCaseFake()))
+        .environmentObject(LoginViewModel())
     // Indicamos que se muestre la vista en modo día por defecto
         .preferredColorScheme(.light)
-    
 }
