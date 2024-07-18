@@ -58,7 +58,7 @@ struct Service: Codable {
     let distance: Float?
     let info: String?
     let favourite: Bool?
-    //let localization: CLLocationCoordinate2D?
+    let localization: CLLocationCoordinate2D?
 }
 
 struct ServiceCategory {
