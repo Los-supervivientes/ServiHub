@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 // MARK: - Protocol
 protocol NetworkHomeProtocol {
@@ -38,9 +39,9 @@ final class NetworkHomeFake: NetworkHomeProtocol {
     func getAllServices() async throws -> [Service] {
 
         return [
-            Service(id: UUID(), category: Category.hairSalon, name: "La puri", punctuation: 4.5, distance: 1.2, info: "Each haircut begins with a complete consultation and hair analysis, followed by a magnificent shampoo and relaxing scalp massage. After your cut, we finish with a technical blow dry style and our recommendations for at home hair care. ", favourite: false),
-            Service(id: UUID(), category: Category.lawyers, name: "Phoenix Wright", punctuation: 5, distance: 0.5, info: "Our people are pioneering, incisive, accountable andfearless in our commitment to create success for our clients. We provide a new level of legal service that bridges the gap between the law and modern business reality.", favourite: true),
-            Service(id: UUID(), category: Category.restaurants, name: "ModernUrban", punctuation: 4.9, distance: 2.5, info: "ModernUrban bridges the traditional with the contemporary, bringing live-fire cooking, housemade pasta, and a robust Italian wine list to the heart of Manhattan West.", favourite: false)
+            Service(id: UUID(), category: Category.hairSalon, name: "La puri", punctuation: 4.5, distance: 1.2, info: "Each haircut begins with a complete consultation and hair analysis, followed by a magnificent shampoo and relaxing scalp massage. After your cut, we finish with a technical blow dry style and our recommendations for at home hair care. ", favourite: false, localization: CLLocationCoordinate2D()),
+            Service(id: UUID(), category: Category.lawyers, name: "Phoenix Wright", punctuation: 5, distance: 0.5, info: "Our people are pioneering, incisive, accountable andfearless in our commitment to create success for our clients. We provide a new level of legal service that bridges the gap between the law and modern business reality.", favourite: true, localization: CLLocationCoordinate2D()),
+            Service(id: UUID(), category: Category.restaurants, name: "ModernUrban", punctuation: 4.9, distance: 2.5, info: "ModernUrban bridges the traditional with the contemporary, bringing live-fire cooking, housemade pasta, and a robust Italian wine list to the heart of Manhattan West.", favourite: false, localization: CLLocationCoordinate2D())
         ]
     }
 }

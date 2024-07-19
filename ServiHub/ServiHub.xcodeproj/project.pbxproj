@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		248392B12C4841980060CE04 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 248392B02C4841980060CE04 /* KeychainSwift */; };
 		248392B42C48458B0060CE04 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392B32C48458B0060CE04 /* Models.swift */; };
 		248392B62C48468A0060CE04 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392B52C48468A0060CE04 /* HomeRepository.swift */; };
 		248392B82C484A080060CE04 /* HomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392B72C484A080060CE04 /* HomeRepositoryProtocol.swift */; };
 		248392BA2C484B230060CE04 /* NetworkHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392B92C484B230060CE04 /* NetworkHome.swift */; };
 		248392BC2C484F690060CE04 /* NetworkRequestHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248392BB2C484F690060CE04 /* NetworkRequestHome.swift */; };
+		248392BF2C49E2CD0060CE04 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 248392BE2C49E2CD0060CE04 /* KeychainSwift */; };
 		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
 		42E324DB2C3923E70072A137 /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DA2C3923E70072A137 /* NetworError.swift */; };
 		42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */; };
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248392B12C4841980060CE04 /* KeychainSwift in Frameworks */,
+				248392BF2C49E2CD0060CE04 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +393,7 @@
 			);
 			name = ServiHub;
 			packageProductDependencies = (
-				248392B02C4841980060CE04 /* KeychainSwift */,
+				248392BE2C49E2CD0060CE04 /* KeychainSwift */,
 			);
 			productName = ServiHub;
 			productReference = 6E0879AC2C37125D00530B06 /* ServiHub.app */;
@@ -472,7 +472,7 @@
 			mainGroup = 6E0879A32C37125D00530B06;
 			packageReferences = (
 				42E324D32C39226B0072A137 /* XCRemoteSwiftPackageReference "ViewInspector" */,
-				248392AF2C4841980060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				248392BD2C49E2CD0060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 6E0879AD2C37125D00530B06 /* Products */;
 			projectDirPath = "";
@@ -901,7 +901,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		248392AF2C4841980060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+		248392BD2C49E2CD0060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
 			requirement = {
@@ -920,9 +920,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		248392B02C4841980060CE04 /* KeychainSwift */ = {
+		248392BE2C49E2CD0060CE04 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 248392AF2C4841980060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			package = 248392BD2C49E2CD0060CE04 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
 		42E324D42C39226B0072A137 /* ViewInspector */ = {
