@@ -10,4 +10,5 @@ import Foundation
 // MARK: - HTTPEndPoints
 enum HTTPEndPoints: String {
     case login = "/api/auth/login"
+    case allServices = "/users/getallservices"
 }
