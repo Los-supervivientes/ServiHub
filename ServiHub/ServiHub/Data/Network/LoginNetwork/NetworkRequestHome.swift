@@ -46,10 +46,10 @@ struct NetworkRequestHome {
             throw NetworkError.malformedURL
         }
         
-        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
-            throw NetworkError.tokenFormatError
-            
-        }
+//        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
+//            throw NetworkError.tokenFormatError
+//            
+//        }
         
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethods.get
