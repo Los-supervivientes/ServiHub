@@ -29,7 +29,7 @@ final class CategoriesUseCase: CategoriesUseCaseProtocol{
 //Fake
 final class CategoriesUseCaseFake: CategoriesUseCaseProtocol {
     var repo: CategoriesRepositoryProtocol
-    init(repo: CategoriesRepositoryProtocol = CategoriesRepository(network: NetworkCategories())){
+    init(repo: CategoriesRepositoryProtocol = CategoriesRepository(network: NetworkCategoriesFake())){
         self.repo = repo
     }
     

@@ -32,9 +32,9 @@ struct RegisterView: View {
     @State private var categiryBusiness: String = ""
     @State private var companyName: String = ""
     @State private var nif: String = ""
-    @State private var selectedItem: Int = 0
+    @State private var selectedItem: String = ""
 
-    private let items: [String] = ["Abogado", "Restaurante", "Gimnasio", "Peluquería", "Dentista"]
+    
     
     
     var body: some View {
@@ -163,9 +163,13 @@ struct RegisterView: View {
                         .padding(.top, 54)
                         
                         VStack{
-                            Picker("Selecciona una opción", selection: $selectedItem) {
-                                ForEach(0..<items.count) { index in
-                                    Text(self.items[index]).tag(index)
+                            Picker("", selection: $selectedItem) {
+                                if let typeCategories = viewModel.categories {
+                                    ForEach(typeCategories) { index in
+                                        if index.description != nil  {
+                                            Text(index.name).tag(index.name)
+                                        }
+                                    }
                                 }
                             }
                             .pickerStyle(MenuPickerStyle())
@@ -363,12 +367,18 @@ struct RegisterView: View {
                     
                     Spacer()
                 }
-                
+
             }
+
         }
         .ignoresSafeArea()
+        .onReceive(viewModel.$categories) { categories in
+            // Cargo un valor inicial a SelectedItem para asegurarme de que el Picker tiene un valor válido por defecto.0
+            if let firstCategory = categories?.first {
+                selectedItem = firstCategory.name
+            }
+        }
     }
-    
 }
 
 

@@ -344,8 +344,8 @@
 				6E0879B52C37125E00530B06 /* ServiHub.entitlements */,
 				52D9902B2C3F04A7007A1EEC /* App */,
 				52D9903E2C3F04B6007A1EEC /* Presentation */,
-				6E62EEBC2C3716CC008205B4 /* Domain */,
 				6E62EEBB2C3716C1008205B4 /* Data */,
+				6E62EEBC2C3716CC008205B4 /* Domain */,
 			);
 			path = ServiHub;
 			sourceTree = "<group>";

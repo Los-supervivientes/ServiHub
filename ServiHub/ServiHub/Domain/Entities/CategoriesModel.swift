@@ -5,20 +5,16 @@
 //  Created by Diego Andrades on 18/7/24.
 //
 
+
 import Foundation
 
 // MARK: - CategoriesModelElement
-struct CategoriesModel: Codable {
-//    let children: [Child]
+struct CategoriesModel: Codable, Identifiable {
     let description: String?
-    let id: String
-    let imageURL: String?
-    let name: String
+    let id, name: String
 }
 
-//// MARK: - Child
-//struct Child: Codable{
-//    let id, name: String
-//    let description: JSONNull?
-//}
-//
+
+
+
+

@@ -16,12 +16,11 @@ final class NetworkCategories: NetworkCategoriesProtocol {
     func getCategories() async -> [CategoriesModel] {
         var modelReturn = [CategoriesModel]()
         
-        let urlCad = "\(ConstantsApp.URL_API)\(HTTPEndPoints.categories.rawValue)"
+        let urlCad = "\(ConstantsApp.CONST_API_URL)\(HTTPEndPoints.categories.rawValue)"
         var request = URLRequest(url: URL(string:urlCad)!)
         request.httpMethod = HTTPMethods.get
-//        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
-        request.addValue("application/x-msgpack; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        request.addValue(ConstantsApp.APIKEY, forHTTPHeaderField: "SSH-ApiKey")
+        request.addValue(ConstantsApp.API_KEY, forHTTPHeaderField: "SSH-ApiKey")
+        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
 
         //Llamamos al servidor
@@ -31,7 +30,7 @@ final class NetworkCategories: NetworkCategoriesProtocol {
             if let resp = response as? HTTPURLResponse{
                 if resp.statusCode == HTTPResponseCodes.SUCESS{
                     
-                    modelReturn.append(try! JSONDecoder().decode(CategoriesModel.self, from: data))
+                    modelReturn = (try! JSONDecoder().decode([CategoriesModel].self, from: data))
                     
                 }
             }
@@ -39,7 +38,6 @@ final class NetworkCategories: NetworkCategoriesProtocol {
             print("error peticion")
         }
         
-        print("Modelo: \(modelReturn)")
         return modelReturn
     }
 }
@@ -48,13 +46,14 @@ final class NetworkCategories: NetworkCategoriesProtocol {
 public final class NetworkCategoriesFake: NetworkCategoriesProtocol {
     public init(){}
     func getCategories() async -> [CategoriesModel] {
-        let categories = CategoriesModel(
-            description: "Categoría principal de Salud y Bienestar",
-            id: "846B7F77-66AD-45AB-A9AC-A1FEE9890CAE",
-            imageURL: "",
-            name: "Salud y Bienestar")
+        let categories =  [ CategoriesModel(description: "Categoría principal de Hogar y Jardín.",
+                                          id: "",
+                                          name: "Hogar y Jardín")
+      ]
         
-        return [categories]
+        return categories
     }
 }
+
+
 
