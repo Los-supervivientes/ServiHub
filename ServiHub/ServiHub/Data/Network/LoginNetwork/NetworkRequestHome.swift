@@ -26,7 +26,7 @@ struct NetworkRequestHome {
         }
         
         guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
-           throw NetworkError.tokenFormatError
+            throw NetworkError.tokenFormatError
             
         }
         
@@ -35,6 +35,27 @@ struct NetworkRequestHome {
         request.setValue(ConstantsApp.SSH_APIKEY, forHTTPHeaderField: HTTPHeader.sshApiKey)
         request.setValue(HTTPAuthentication.bearerToken(token),
                          forHTTPHeaderField: HTTPHeader.authorization)
+        
+        return request
+    }
+    
+    // MARK: Request For GetAllCategories
+    func requestForGetAllCategories() async throws -> URLRequest {
+        
+        guard let url = URL(string: "\(ConstantsApp.LOCALHOST)\(HTTPEndPoints.allCategories.rawValue)") else {
+            throw NetworkError.malformedURL
+        }
+        
+        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
+            throw NetworkError.tokenFormatError
+            
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethods.get
+        request.setValue(ConstantsApp.SSH_APIKEY, forHTTPHeaderField: HTTPHeader.sshApiKey)
+        //request.setValue(HTTPAuthentication.bearerToken(token),
+        //                 forHTTPHeaderField: HTTPHeader.authorization)
 
         return request
     }

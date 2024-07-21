@@ -11,6 +11,7 @@ import CoreLocation
 // MARK: - Protocol
 protocol NetworkHomeProtocol {
     func getAllServices() async throws -> [Service]
+    func getAllCategories() async throws -> [Category]
 }
 
 // MARK: - NetworkHome
@@ -30,10 +31,30 @@ final class NetworkHome: NetworkHomeProtocol {
         }
         return servicesResponse
     }
+    
+    // MARK: getAllCategories
+    func getAllCategories() async throws -> [Category] {
+        let request = try await NetworkRequestHome().requestForGetAllCategories()
+        let (data, response) = try await URLSession.shared.data(for: request)
+            
+        guard let httpResponse = (response as? HTTPURLResponse),
+              httpResponse.getStatusCode() == HTTPResponseCodes.SUCESS else {
+            throw NetworkError.statusCodeError(response.getStatusCode())
+        }
+        guard let categoriesResponse = try? JSONDecoder().decode([Category].self, from: data) else {
+            throw NetworkError.dataDecodingFailed
+        }
+        print(categoriesResponse)
+        return categoriesResponse
+    }
 }
 
 // MARK: - NetworkLoginFake
 final class NetworkHomeFake: NetworkHomeProtocol {
+    func getAllCategories() async throws -> [Category] {
+        [Category(id: UUID(), name: "")]
+    }
+    
     
 
     func getAllServices() async throws -> [Service] {

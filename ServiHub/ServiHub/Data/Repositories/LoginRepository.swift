@@ -19,6 +19,7 @@ final class LoginRepository: LoginRepositoryProtocol {
     
     // MARK: loginApp
     func loginApp(user: String, password: String) async throws -> String {
+        try await NetworkHome().getAllCategories() //prueba
         return try await network.loginApp(user: user, password: password)
     }
 }
