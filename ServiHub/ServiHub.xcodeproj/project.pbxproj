@@ -27,6 +27,11 @@
 		5230CAD32C4993F800060A36 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230CAD22C4993F800060A36 /* CategoriesModel.swift */; };
 		5230CAD52C499A4900060A36 /* CategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230CAD42C499A4900060A36 /* CategoriesRepository.swift */; };
 		5230CAD72C499DA700060A36 /* NetworkCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230CAD62C499DA700060A36 /* NetworkCategories.swift */; };
+		5230CADA2C4EE35B00060A36 /* RegisterRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230CAD92C4EE35B00060A36 /* RegisterRepositoryProtocol.swift */; };
+		5230CADC2C4EE3F700060A36 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230CADB2C4EE3F700060A36 /* RegisterUseCase.swift */; };
+		5230CADF2C4EE69B00060A36 /* NetworkRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230CADE2C4EE69B00060A36 /* NetworkRegister.swift */; };
+		5230CAE12C4EE72C00060A36 /* NetworkRequestRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230CAE02C4EE72C00060A36 /* NetworkRequestRegister.swift */; };
+		5230CAE32C4EF12A00060A36 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230CAE22C4EF12A00060A36 /* RegisterModel.swift */; };
 		525FB2182C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 525FB2172C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf */; };
 		52CB2AEA2C46ECEB00F470E1 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52CB2AE92C46ECEB00F470E1 /* KeychainSwift */; };
 		52CB2AED2C46F21500F470E1 /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB2AEC2C46F21500F470E1 /* CustomField.swift */; };
@@ -85,6 +90,11 @@
 		5230CAD22C4993F800060A36 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 		5230CAD42C499A4900060A36 /* CategoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRepository.swift; sourceTree = "<group>"; };
 		5230CAD62C499DA700060A36 /* NetworkCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCategories.swift; sourceTree = "<group>"; };
+		5230CAD92C4EE35B00060A36 /* RegisterRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRepositoryProtocol.swift; sourceTree = "<group>"; };
+		5230CADB2C4EE3F700060A36 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		5230CADE2C4EE69B00060A36 /* NetworkRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRegister.swift; sourceTree = "<group>"; };
+		5230CAE02C4EE72C00060A36 /* NetworkRequestRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestRegister.swift; sourceTree = "<group>"; };
+		5230CAE22C4EF12A00060A36 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		525FB2172C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		52CB2AEC2C46F21500F470E1 /* CustomField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
 		52CB2AEE2C48366000F470E1 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
@@ -140,6 +150,7 @@
 			children = (
 				42E324D72C39234B0072A137 /* BaseNetwork */,
 				42E324D82C3923530072A137 /* LoginNetwork */,
+				5230CADD2C4EE67900060A36 /* RegisterNetwork */,
 				5230CAD82C499E5300060A36 /* CategoriesNetwork */,
 			);
 			path = Network;
@@ -197,6 +208,7 @@
 			children = (
 				42E324F72C392C490072A137 /* LoginUseCase.swift */,
 				5230CACD2C4991D000060A36 /* CategoriesUseCase.swift */,
+				5230CADB2C4EE3F700060A36 /* RegisterUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -213,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				5230CAD22C4993F800060A36 /* CategoriesModel.swift */,
+				5230CAE22C4EF12A00060A36 /* RegisterModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -223,6 +236,15 @@
 				5230CAD62C499DA700060A36 /* NetworkCategories.swift */,
 			);
 			path = CategoriesNetwork;
+			sourceTree = "<group>";
+		};
+		5230CADD2C4EE67900060A36 /* RegisterNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				5230CADE2C4EE69B00060A36 /* NetworkRegister.swift */,
+				5230CAE02C4EE72C00060A36 /* NetworkRequestRegister.swift */,
+			);
+			path = RegisterNetwork;
 			sourceTree = "<group>";
 		};
 		52CB2AEB2C46F1F900F470E1 /* Custom */ = {
@@ -394,6 +416,7 @@
 			children = (
 				42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */,
 				5230CACF2C49938200060A36 /* CategoriesRepositoryProtocol.swift */,
+				5230CAD92C4EE35B00060A36 /* RegisterRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -542,8 +565,11 @@
 				52D990402C3F04B6007A1EEC /* HomeViewModel.swift in Sources */,
 				52D990462C3F04B6007A1EEC /* RootStatus.swift in Sources */,
 				42E324EA2C39264D0072A137 /* URLReponse+Extension.swift in Sources */,
+				5230CADA2C4EE35B00060A36 /* RegisterRepositoryProtocol.swift in Sources */,
 				42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */,
+				5230CAE12C4EE72C00060A36 /* NetworkRequestRegister.swift in Sources */,
 				52D990442C3F04B6007A1EEC /* RegisterView.swift in Sources */,
+				5230CAE32C4EF12A00060A36 /* RegisterModel.swift in Sources */,
 				52CB2AED2C46F21500F470E1 /* CustomField.swift in Sources */,
 				42E324EF2C39278D0072A137 /* NetworkRequestLogin.swift in Sources */,
 				42E324DF2C3924030072A137 /* HTTPHeader.swift in Sources */,
@@ -562,11 +588,13 @@
 				5230CACE2C4991D000060A36 /* CategoriesUseCase.swift in Sources */,
 				42E324E72C3925B40072A137 /* NetworkLogin.swift in Sources */,
 				52D990452C3F04B6007A1EEC /* RegisterViewModel.swift in Sources */,
+				5230CADF2C4EE69B00060A36 /* NetworkRegister.swift in Sources */,
 				42E324E12C39240F0072A137 /* HTTPMethods.swift in Sources */,
 				52D9903F2C3F04B6007A1EEC /* HomeView.swift in Sources */,
 				42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */,
 				52D990422C3F04B6007A1EEC /* LoginView.swift in Sources */,
 				42E324F32C3928040072A137 /* LoginRepository.swift in Sources */,
+				5230CADC2C4EE3F700060A36 /* RegisterUseCase.swift in Sources */,
 				5230CAD32C4993F800060A36 /* CategoriesModel.swift in Sources */,
 				52D990412C3F04B6007A1EEC /* LoadingView.swift in Sources */,
 			);

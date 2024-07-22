@@ -10,9 +10,7 @@ import Foundation
 final class LoginViewModel: ObservableObject {
     
     @Published var rootStatus: RootStatus = .initial
-//    @Published var isLogged: Bool = false
-    
-   
+ 
     private var loginUseCase: LoginUseCaseProtocol
     
     //MARK: - Inits

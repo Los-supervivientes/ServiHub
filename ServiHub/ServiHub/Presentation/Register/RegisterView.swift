@@ -29,12 +29,12 @@ struct RegisterView: View {
     @State private var state: String = ""
     @State private var postalCode: String = ""
     @State private var country: String = ""
-    @State private var categiryBusiness: String = ""
+    @State private var categoryBusiness: String = ""
     @State private var companyName: String = ""
     @State private var nif: String = ""
     @State private var selectedItem: String = ""
 
-    
+
     
     
     var body: some View {
@@ -268,7 +268,8 @@ struct RegisterView: View {
                     VStack{
                         Button {
                             ///Enviamos los datos y volvemos al login
-                            self.rootViewModel.rootStatus =  .initial
+                            viewModel.onRegisterButton(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: selectedItem, companyName: companyName, nif: nif)
+                            
                         } label: {
                             
                             ///Definimos las propiedades del botón de registrame

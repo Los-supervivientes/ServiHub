@@ -31,7 +31,6 @@ final class NetworkCategories: NetworkCategoriesProtocol {
                 if resp.statusCode == HTTPResponseCodes.SUCESS{
                     
                     modelReturn = (try! JSONDecoder().decode([CategoriesModel].self, from: data))
-                    
                 }
             }
         }catch{
