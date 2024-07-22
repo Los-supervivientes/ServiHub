@@ -11,7 +11,7 @@ import Foundation
 final class RegisterViewModel: ObservableObject{
     
     @Published var categories: [CategoriesModel]?
-  
+    private var registerUseCase: RegisterUseCaseProtocol
     
     private var network: CategoriesUseCaseProtocol
     
@@ -108,14 +108,14 @@ final class RegisterViewModel: ObservableObject{
                             , categoryBusiness: String, companyName: String, nif: String) {
         Task {
             do {
-                if ( try await loginUseCase.loginApp(user: user, password: password)) {
+                if ( try await registerUseCase.RegisterApp(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: categoryBusiness, companyName: companyName, nif: nif)) {
                     DispatchQueue.main.async {
-//                        self.rootStatus = .loaded
+                        //                        self.rootStatus = .loaded
                     }
                 }
             } catch {
                 self.rootStatus = .initial
-               
+                
             }
         }
     }

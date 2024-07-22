@@ -7,9 +7,6 @@
 
 import Foundation
 
-
-import Foundation
-
 // MARK: - Protocol
 protocol NetworkRegisterProtocol {
     func RegisterApp(typeUser: Bool, name: String, firstSurname: String, secondSurname: String?, mobile: String, email: String, password: String, street: String, city: String, state: String, postalCode: String, country: String, categoryBusiness: String, companyName: String, nif: String) async throws -> String
@@ -24,25 +21,27 @@ final class NetworkRegister: NetworkRegisterProtocol {
     func RegisterApp(typeUser: Bool, name: String, firstSurname: String, secondSurname: String?, mobile: String, email: String, password: String, street: String, city: String, state: String, postalCode: String, country: String, categoryBusiness: String, companyName: String, nif: String) async throws -> String {
         
         
-        let request = try await NetworkRequestLogin().requestForLogin(user: user, password: password)
+       
+        let request = try await NetworkRequestRegister().requestForRegister(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: categoryBusiness, companyName: companyName, nif: nif)
+        
         let (data, response) = try await URLSession.shared.data(for: request)
             
         guard let httpResponse = (response as? HTTPURLResponse),
               httpResponse.getStatusCode() == HTTPResponseCodes.SUCESS else {
             throw NetworkError.statusCodeError(response.getStatusCode())
         }
-        guard let token = String(data: data, encoding: .utf8) else {
+        guard let recive = String(data: data, encoding: .utf8) else {
             throw NetworkError.tokenFormatError
         }
-        return token
+        return recive
     }
 }
     
 
 
 // MARK: - NetworkLoginFake
-final class NetworkLoginFake: NetworkLoginProtocol {
-    func loginApp(user: String, password: String) async throws -> String {
+final class NetworkReegisterFake: NetworkRegisterProtocol {
+    func RegisterApp(typeUser: Bool, name: String, firstSurname: String, secondSurname: String?, mobile: String, email: String, password: String, street: String, city: String, state: String, postalCode: String, country: String, categoryBusiness: String, companyName: String, nif: String) async throws -> String {
         UUID().uuidString
     }
 }

@@ -57,39 +57,39 @@ final class RegisterUseCase: RegisterUseCaseProtocol {
 }
 
 
-// MARK: - LoginUseCaseFake
-final class LoginUseCaseFake: LoginUseCaseProtocol {
-
-    // MARK: Properties
-    private let repo: LoginRepositoryProtocol
-    private let secureData: SecureDataProtocol
-    
-    // MARK: Inits
-    init(repo: LoginRepositoryProtocol = LoginRepositoryFake(),
-         secureData: SecureDataProtocol = SecureDataUserDefaults()) {
-        self.repo = repo
-        self.secureData = secureData
-    }
-    
-    // MARK: LoginApp
-    func loginApp(user: String, password: String) async throws -> Bool {
-        let token = try await repo.loginApp(user: user, password: password)
-        if token != "" {
-            secureData.setToken(token: token, key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-            return true
-        } else {
-            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-            return false
-        }
-    }
-    
-    // MARK: Logout
-    func logout() async {
-        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-    }
-    
-    // MARK: ValidateToken
-    func validateToken() async -> Bool {
-        return true
-    }
-}
+//// MARK: - LoginUseCaseFake
+//final class LoginUseCaseFake: LoginUseCaseProtocol {
+//
+//    // MARK: Properties
+//    private let repo: LoginRepositoryProtocol
+//    private let secureData: SecureDataProtocol
+//    
+//    // MARK: Inits
+//    init(repo: LoginRepositoryProtocol = LoginRepositoryFake(),
+//         secureData: SecureDataProtocol = SecureDataUserDefaults()) {
+//        self.repo = repo
+//        self.secureData = secureData
+//    }
+//    
+//    // MARK: LoginApp
+//    func loginApp(user: String, password: String) async throws -> Bool {
+//        let token = try await repo.loginApp(user: user, password: password)
+//        if token != "" {
+//            secureData.setToken(token: token, key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+//            return true
+//        } else {
+//            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+//            return false
+//        }
+//    }
+//    
+//    // MARK: Logout
+//    func logout() async {
+//        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+//    }
+//    
+//    // MARK: ValidateToken
+//    func validateToken() async -> Bool {
+//        return true
+//    }
+//}

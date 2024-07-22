@@ -11,7 +11,7 @@ import Foundation
 // MARK: - RegisterUserModel
 struct RegisterModel{
     
-    struct RegisterUserModel: Codable {
+    struct RegisterUserModel: Encodable {
         let name : String
         let firstSurname: String
         let secondSurname: String

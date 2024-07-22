@@ -17,7 +17,7 @@ struct NetworkRequestRegister {
                             , categoryBusiness: String, companyName: String, nif: String) async throws -> URLRequest {
             
         var typeRegister : HTTPEndPoints
-        var jsonEncoder : Array = []
+        var jsonEncoder : Data
     
 
         if typeUser {
@@ -42,7 +42,8 @@ struct NetworkRequestRegister {
                                                         mobile: mobile,
                                                         email: email,
                                                         password: password))
-         
+            
+            jsonEncoder = try JSONEncoder().encode(data)
         }else{
             var data = [RegisterModel.RegisterProfModel]()
             data.append(RegisterModel.RegisterProfModel(name: name,
@@ -59,17 +60,15 @@ struct NetworkRequestRegister {
                                                         categoryBusiness: categoryBusiness,
                                                         companyName: companyName,
                                                         nif: nif))
+            jsonEncoder = try JSONEncoder().encode(data)
         }
         
-        
-        
-        
-            
+        /// Creamos la request
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethods.post
         request.addValue(ConstantsApp.API_KEY, forHTTPHeaderField: "SSH-ApiKey")
         request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        request.httpBody = 
+        request.httpBody =  jsonEncoder
         return request
     }
 }
