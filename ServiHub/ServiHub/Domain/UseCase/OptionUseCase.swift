@@ -10,27 +10,27 @@ import Combine
 
 // MARK: - Protocol
 protocol OptionsUseCaseProtocol {
-    func saveChanges() async throws
+    func saveChanges(notificationsEnabled: Bool, faceIDEnabled: Bool) async throws
     func logout() async
 }
+
 // MARK: - OptionsUseCase
 final class OptionsUseCase: OptionsUseCaseProtocol {
     // MARK: Save Changes
-    func saveChanges() async throws {
-        // Simulación de la acción para guardar cambios
-        // Implementa la lógica real aquí
+    func saveChanges(notificationsEnabled: Bool, faceIDEnabled: Bool) async throws {
+        // Guarda las configuraciones en UserDefaults
+        UserDefaults.standard.set(notificationsEnabled, forKey: "notificationsEnabled")
+        UserDefaults.standard.set(faceIDEnabled, forKey: "faceIDEnabled")
         print("Changes saved")
     }
     
     // MARK: Logout
     func logout() async {
-        // Simulación del proceso de logout
+        // Limpia el estado de la sesión y cualquier otro dato necesario
+        UserDefaults.standard.removeObject(forKey: "userToken") // Por ejemplo, elimina el token de usuario
         print("Logged out")
-        // Implementa la lógica para limpiar el estado de sesión aquí
     }
-    
 }
-
 // MARK: - OptionsUseCaseFake
 final class OptionsUseCaseFake: OptionsUseCaseProtocol {
     
@@ -38,7 +38,7 @@ final class OptionsUseCaseFake: OptionsUseCaseProtocol {
     private var mockSettings: (notificationsEnabled: Bool, faceIDEnabled: Bool) = (true, false)
     
     // MARK: Save Changes
-    func saveChanges() async throws {
+    func saveChanges(notificationsEnabled: Bool, faceIDEnabled: Bool) async throws {
         // Simulación de la acción para guardar cambios
         print("Fake changes saved")
     }
