@@ -39,8 +39,8 @@ final class NetworkRegister: NetworkRegisterProtocol {
     
 
 
-// MARK: - NetworkLoginFake
-final class NetworkReegisterFake: NetworkRegisterProtocol {
+// MARK: - NetworkRegisterFake
+final class NetworkRegisterFake: NetworkRegisterProtocol {
     func RegisterApp(typeUser: Bool, name: String, firstSurname: String, secondSurname: String?, mobile: String, email: String, password: String, street: String, city: String, state: String, postalCode: String, country: String, categoryBusiness: String, companyName: String, nif: String) async throws -> String {
         UUID().uuidString
     }

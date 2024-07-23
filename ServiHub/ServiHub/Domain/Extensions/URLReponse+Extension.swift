@@ -13,6 +13,7 @@ extension URLResponse {
     // MARK: GetStatusCode
     func getStatusCode() -> Int {
         if let httpResponse = self as? HTTPURLResponse{
+            print(httpResponse.statusCode)
             return httpResponse.statusCode
         } else {
             return 0
