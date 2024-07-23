@@ -2,7 +2,7 @@
 //  RegisterRepository.swift
 //  ServiHub
 //
-//  Created by Diego Andrades on 18/7/24.
+/////  Created by Diego Andrades on 18/7/24.
 //
 
 import Foundation
@@ -22,7 +22,7 @@ final class CategoriesRepository: CategoriesRepositoryProtocol {
 
 
  // Caso Fake
-final class RegisterRepositoryFake: CategoriesRepositoryProtocol {
+final class CategoriesRepositoryFake: CategoriesRepositoryProtocol {
     private var Network: NetworkCategoriesProtocol
     
     init(network: NetworkCategoriesProtocol = NetworkCategoriesFake()){

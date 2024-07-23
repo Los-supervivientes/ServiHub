@@ -56,25 +56,25 @@ final class RegisterViewModel: ObservableObject{
             return"Error verificando el password"
         }
         
-        guard let companyName = companyName, isValid(genericTextField: companyName), !typeUser else {
+        guard let companyName = companyName, isValid(genericTextField: companyName, typeUser: typeUser)else {
             return "Error campo companyName Vacio"
         }
-        guard let nif = nif, isValid(genericTextField: nif), !typeUser else {
+        guard let nif = nif, isValid(genericTextField: nif, typeUser: typeUser) else {
             return "Error campo nif Vacio"
         }
-        guard let street = street, isValid(genericTextField: street), !typeUser else {
+        guard let street = street, isValid(genericTextField: street, typeUser: typeUser) else {
             return "Error campo street Vacio"
         }
-        guard let city = city, isValid(genericTextField: city), !typeUser else {
+        guard let city = city, isValid(genericTextField: city, typeUser: typeUser) else {
             return "Error campo city Vacio"
         }
-        guard let state = state, isValid(genericTextField: state), !typeUser else {
+        guard let state = state, isValid(genericTextField: state, typeUser: typeUser)else {
             return "Error campo state Vacio"
         }
-        guard let postalCode = postalCode, isValid(genericTextField: postalCode), !typeUser else {
+        guard let postalCode = postalCode, isValid(genericTextField: postalCode, typeUser: typeUser) else {
             return "Error campo postalCode Vacio"
         }
-        guard let country = country, isValid(genericTextField: country), !typeUser else {
+        guard let country = country, isValid(genericTextField: country, typeUser: typeUser) else {
             return "Error campo country Vacio"
             
         }
@@ -97,8 +97,15 @@ final class RegisterViewModel: ObservableObject{
     }
     
     //MARK: - CheckGenericTextField
-    private func isValid(genericTextField: String) -> Bool{
-        genericTextField.isEmpty == false
+    private func isValid(genericTextField: String, typeUser: Bool = false) -> Bool{
+        if typeUser {
+            return true
+        }else {
+            if genericTextField.isEmpty{
+                return false
+            }
+        }
+        return true
     }
     
     //MARK: - RegisterApp

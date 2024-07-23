@@ -35,18 +35,21 @@ struct NetworkRequestRegister {
         
         //Introduzco los datos en el modelo
         if typeRegister == HTTPEndPoints.registerUser {
-            var data = [RegisterModel.RegisterUserModel]()
-            data.append(RegisterModel.RegisterUserModel(name: name,
+           
+            let data = (RegisterModel.RegisterUserModel(name: name,
                                                         firstSurname: firstSurname,
                                                         secondSurname: secondSurname ?? "",
                                                         mobile: mobile,
                                                         email: email,
                                                         password: password))
-            
+         
             jsonEncoder = try JSONEncoder().encode(data)
+            if let jsonString = String(data: jsonEncoder, encoding: .utf8) {
+                print(jsonString)
+            }
         }else{
-            var data = [RegisterModel.RegisterProfModel]()
-            data.append(RegisterModel.RegisterProfModel(name: name,
+          
+            let data = (RegisterModel.RegisterProfModel(name: name,
                                                         firstSurname: firstSurname,
                                                         secondSurname: secondSurname ?? "",
                                                         mobile: mobile,
@@ -60,14 +63,18 @@ struct NetworkRequestRegister {
                                                         categoryBusiness: categoryBusiness,
                                                         companyName: companyName,
                                                         nif: nif))
+       
             jsonEncoder = try JSONEncoder().encode(data)
+            if let jsonString = String(data: jsonEncoder, encoding: .utf8) {
+                print(jsonString)
+            }
         }
         
         /// Creamos la request
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethods.post
-        request.addValue(ConstantsApp.API_KEY, forHTTPHeaderField: "SSH-ApiKey")
-        request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.setValue(ConstantsApp.API_KEY, forHTTPHeaderField: "SSH-ApiKey")
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.httpBody =  jsonEncoder
         return request
     }

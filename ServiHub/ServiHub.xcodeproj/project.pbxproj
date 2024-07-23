@@ -150,7 +150,6 @@
 		42E324D62C3923430072A137 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				5230CADE2C4EE69B00060A36 /* NetworkRegister.swift */,
 				42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */,
 				42E324D72C39234B0072A137 /* BaseNetwork */,
 				42E324D82C3923530072A137 /* LoginNetwork */,
@@ -245,6 +244,7 @@
 		5230CADD2C4EE67900060A36 /* RegisterNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				5230CADE2C4EE69B00060A36 /* NetworkRegister.swift */,
 				5230CAE02C4EE72C00060A36 /* NetworkRequestRegister.swift */,
 			);
 			path = RegisterNetwork;

@@ -13,7 +13,7 @@ protocol NetworkRegisterProtocol {
 }
 
 
-// MARK: - NetworkLogin
+// MARK: - NetworkRegister
 final class NetworkRegister: NetworkRegisterProtocol {
     
     // MARK: RegisterApp

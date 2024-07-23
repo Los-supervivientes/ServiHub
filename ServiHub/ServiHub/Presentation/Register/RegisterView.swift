@@ -268,7 +268,7 @@ struct RegisterView: View {
                     VStack{
                         Button {
                             ///Enviamos los datos y volvemos al login
-                            viewModel.onRegisterButton(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: selectedItem, companyName: companyName, nif: nif)
+                           _ = viewModel.onRegisterButton(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: selectedItem, companyName: companyName, nif: nif)
                             
                         } label: {
                             
