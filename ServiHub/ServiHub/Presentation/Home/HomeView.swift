@@ -10,31 +10,58 @@ import SwiftUI
 //MARK: - Pantalla de Home
 
 struct HomeView: View {
-    @EnvironmentObject var rootViewModel: LoginViewModel
+    @StateObject var viewModel: HomeViewModel
+    
+    private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
     
     var body: some View {
-        
-            ZStack{
-                ///Creamos imagen de fondo
-                Image(.fondoLogin)
+        NavigationStack {
+            
+            ZStack {
+                Image(.fondoLoading)
                     .resizable()
+                    .ignoresSafeArea()
                     .id(1)
-                VStack{
-                    Text("HOME")
-                    
-                }
                 
-      
+                VStack(spacing: 20) {
+                    FilterBar(selectedCategories: $viewModel.selectedCategories, categories: viewModel.allCategories()) { category in
+                        if let category = category {
+                            viewModel.toggleCategoryFilter(category)
+                        } else {
+                            viewModel.selectedCategories.removeAll()
+                            viewModel.applyFilter()
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    
+                    ScrollView(.vertical) {
+                        ForEach(viewModel.filterServiceByCategory, id: \.category) { serviceCategory in
+                            VStack(alignment: .leading) {
+                                Text(serviceCategory.category.name)
+                                    .font(.title)
+                                    .padding([.leading, .top])
+                                
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack(spacing: 20) {
+                                        ForEach(serviceCategory.services, id: \.id) { service in
+                                            ServiceCardView(service: service)
+                                                .padding([.leading, .bottom])
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            .ignoresSafeArea()
+            .navigationTitle("HOME")
+            .font(.title)
         }
     }
+}
 
 
 #Preview {
-  
-    HomeView()
-            // Indicamos que se muestre la vista en modo día por defecto
+    HomeView(viewModel: HomeViewModel())
         .preferredColorScheme(.light)
-
 }

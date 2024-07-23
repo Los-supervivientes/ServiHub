@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category: Codable {
+struct Category: Codable, Hashable {
     let id: UUID?
     let name: String
 }

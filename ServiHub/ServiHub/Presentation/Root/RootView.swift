@@ -27,7 +27,7 @@ struct RootView: View {
             RegisterView()
         case .loaded:
             // Vista pantalla home
-            HomeView()
+            HomeView(viewModel: HomeViewModel())
         }
     }
 }

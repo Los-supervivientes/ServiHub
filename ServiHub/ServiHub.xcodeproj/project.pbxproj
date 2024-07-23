@@ -43,6 +43,8 @@
 		6E0879C22C37125E00530B06 /* ServiHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879C12C37125E00530B06 /* ServiHubTests.swift */; };
 		6E0879CC2C37125E00530B06 /* ServiHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */; };
 		6E0879CE2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */; };
+		6E6952252C50020900B8E070 /* HomeFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6952242C50020900B8E070 /* HomeFilterBar.swift */; };
+		6E6952272C5002A100B8E070 /* ServiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6952262C5002A100B8E070 /* ServiceCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		6E0879C72C37125E00530B06 /* ServiHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0879CB2C37125E00530B06 /* ServiHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiHubUITests.swift; sourceTree = "<group>"; };
 		6E0879CD2C37125E00530B06 /* ServiHubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiHubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6E6952242C50020900B8E070 /* HomeFilterBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterBar.swift; sourceTree = "<group>"; };
+		6E6952262C5002A100B8E070 /* ServiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +238,9 @@
 		52D990312C3F04B6007A1EEC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6E6952242C50020900B8E070 /* HomeFilterBar.swift */,
 				52D9902F2C3F04B6007A1EEC /* HomeView.swift */,
+				6E6952262C5002A100B8E070 /* ServiceCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 				52D990462C3F04B6007A1EEC /* RootStatus.swift in Sources */,
 				42E324EA2C39264D0072A137 /* URLReponse+Extension.swift in Sources */,
 				42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */,
+				6E6952252C50020900B8E070 /* HomeFilterBar.swift in Sources */,
 				52D990442C3F04B6007A1EEC /* RegisterView.swift in Sources */,
 				42E324EF2C39278D0072A137 /* NetworkRequestLogin.swift in Sources */,
 				42E324DF2C3924030072A137 /* HTTPHeader.swift in Sources */,
@@ -534,6 +541,7 @@
 				248392B62C48468A0060CE04 /* HomeRepository.swift in Sources */,
 				42E324DB2C3923E70072A137 /* NetworError.swift in Sources */,
 				42E324ED2C3926A70072A137 /* ConstantsApp.swift in Sources */,
+				6E6952272C5002A100B8E070 /* ServiceCardView.swift in Sources */,
 				42E324E72C3925B40072A137 /* NetworkLogin.swift in Sources */,
 				248392BA2C484B230060CE04 /* NetworkHome.swift in Sources */,
 				52D990452C3F04B6007A1EEC /* RegisterViewModel.swift in Sources */,
