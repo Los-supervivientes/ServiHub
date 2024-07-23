@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct OptionsView: View {
-    @State private var notificationsEnabled = true
-    @State private var faceIDEnabled = false
+    @StateObject private var viewModel: OptionsViewModel
+    
+    init(viewModel: OptionsViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -19,14 +23,22 @@ struct OptionsView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack(alignment: .leading, spacing: 16) {
-                    // Título de la pantalla
-                    Text("Opciones")
+                    // Título de la pantalla con engranaje
+                    HStack {
+                        Text("Opciones")
                             .font(Font.custom("Grandstander-Italic-VariableFont_wght", size: 36))
-                    
-                        .foregroundColor(Color(red: 0.7, green: 0.69, blue: 0.85))
-                        .background(.white)
-                        .padding(.leading, 16)
-                        .padding(.top, 16)
+                            .foregroundColor(Color(red: 0.7, green: 0.69, blue: 0.85))
+                            .background(.white)
+                        
+                        Spacer()
+                        
+                        Image(systemName: "gearshape")
+                            .foregroundColor(Color(red: 0.7, green: 0.69, blue: 0.85))
+                            .font(.system(size: 32)) // Ajusta el tamaño aquí
+                            .padding(.trailing, 16)
+                    }
+                    .padding(.leading, 16)
+                    .padding(.top, 16)
                     
                     // Contenido del perfil
                     VStack(alignment: .leading, spacing: 16) {
@@ -46,17 +58,17 @@ struct OptionsView: View {
                                 // Acción para cambiar nombre de usuario
                             }) {
                                 HStack(spacing: 8) {
-                                      Image(systemName: "person.circle")
-                                          .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
-                                          .frame(width: 22, height: 22)
-                                          .padding(.leading, 16)
-                                      
-                                      Text("Cambiar nombre de usuario")
-                                          .font(Font.custom("SF Compact Display", size: 18))
-                                          .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
-                                          .frame(maxWidth: .infinity, alignment: .leading)
-                                          .padding(.horizontal, 8)
-                                  }
+                                    Image(systemName: "person.circle")
+                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .frame(width: 22, height: 22)
+                                        .padding(.leading, 16)
+                                    
+                                    Text("Cambiar nombre de usuario")
+                                        .font(Font.custom("SF Compact Display", size: 18))
+                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(.horizontal, 8)
+                                }
                             }
                             Divider()
                             
@@ -65,35 +77,36 @@ struct OptionsView: View {
                                 // Acción para cambiar email
                             }) {
                                 HStack(spacing: 8) {
-                                       Image(systemName: "envelope")
-                                           .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
-                                           .frame(width: 22, height: 22)
-                                           .padding(.leading, 16)
-                                       
-                                       Text("Cambiar email")
-                                           .font(Font.custom("SF Compact Display", size: 18))
-                                           .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
-                                           .frame(maxWidth: .infinity, alignment: .leading)
-                                           .padding(.horizontal, 8)
-                                   }
+                                    Image(systemName: "envelope")
+                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .frame(width: 22, height: 22)
+                                        .padding(.leading, 16)
+                                    
+                                    Text("Cambiar email")
+                                        .font(Font.custom("SF Compact Display", size: 18))
+                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(.horizontal, 8)
+                                }
                             }
                             Divider()
+                            
                             // Botón para cambiar contraseña
                             Button(action: {
                                 // Acción para cambiar contraseña
                             }) {
                                 HStack(spacing: 8) {
-                                        Image(systemName: "lock")
-                                            .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
-                                            .frame(width: 22, height: 22)
-                                            .padding(.leading, 16)
-                                        
-                                        Text("Cambiar contraseña")
-                                            .font(Font.custom("SF Compact Display", size: 18))
-                                            .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                            .padding(.horizontal, 8)
-                                    }
+                                    Image(systemName: "lock")
+                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .frame(width: 22, height: 22)
+                                        .padding(.leading, 16)
+                                    
+                                    Text("Cambiar contraseña")
+                                        .font(Font.custom("SF Compact Display", size: 18))
+                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(.horizontal, 8)
+                                }
                             }
                         }
                         Divider()
@@ -106,6 +119,7 @@ struct OptionsView: View {
                             .foregroundColor(Color(red: 0.48, green: 0.6, blue: 0.78))
                             .padding(.horizontal, 16)
                         Divider()
+                        
                         // Opción: Notificaciones
                         HStack {
                             Image(systemName: "bell")
@@ -120,11 +134,12 @@ struct OptionsView: View {
                             
                             Spacer()
                             
-                            Toggle("", isOn: $notificationsEnabled)
+                            Toggle("", isOn: $viewModel.notificationsEnabled)
                                 .toggleStyle(SwitchToggleStyle(tint: Color.blue))
                                 .padding(.trailing, 16)
                         }
                         Divider()
+                        
                         // Opción: Face ID
                         HStack {
                             Image(systemName: "camera")
@@ -139,30 +154,60 @@ struct OptionsView: View {
                             
                             Spacer()
                             
-                            Toggle("", isOn: $faceIDEnabled)
+                            Toggle("", isOn: $viewModel.faceIDEnabled)
                                 .toggleStyle(SwitchToggleStyle(tint: Color.blue))
                                 .padding(.trailing, 16)
                         }
-                       
+                        Divider()
+                        
+                        // Botones de "Guardar" y "Logout"
+                        HStack {
+                            Spacer()
+                            
+                            HStack(spacing: 16) {
+                                Button(action: {
+                                    viewModel.saveChanges()
+                                }) {
+                                    Text("Guardar")
+                                        .font(Font.custom("SF Compact Display", size: 18))
+                                        .foregroundColor(.white)
+                                        .frame(width: 130, height: 50)
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                }
+                                
+                                Button(action: {
+                                    viewModel.logout()
+                                }) {
+                                    Text("Logout")
+                                        .font(Font.custom("SF Compact Display", size: 18))
+                                        .foregroundColor(.white)
+                                        .frame(width: 130, height: 50)
+                                        .background(Color.red)
+                                        .cornerRadius(10)
+                                }
+                            }
+                            
+                            Spacer()
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.top, 16)
                     }
-                    Spacer()
-                    
-                    
                     .padding(.horizontal, 16)
                     .padding(.top, 8)
+                    
+                    Spacer()
                 }
                 .background(Color.white)
                 .cornerRadius(20)
                 .padding(.horizontal, 16)
-                .padding(.top, 16) // Espacio superior adicional
+                .padding(.top, 16)
             }
-            Spacer()
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top) // Alinear al inicio
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
     }
 }
-
-
 #Preview {
-    OptionsView()
+    OptionsView(viewModel: OptionsViewModel(useCase: OptionsUseCase()))
 }
+
