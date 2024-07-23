@@ -25,12 +25,7 @@ struct HomeView: View {
                 
                 VStack(spacing: 20) {
                     FilterBar(selectedCategories: $viewModel.selectedCategories, categories: viewModel.allCategories()) { category in
-                        if let category = category {
-                            viewModel.toggleCategoryFilter(category)
-                        } else {
-                            viewModel.selectedCategories.removeAll()
-                            viewModel.applyFilter()
-                        }
+                        viewModel.toggleCategoryFilter(category)
                     }
                     .padding(.horizontal, 20)
                     
