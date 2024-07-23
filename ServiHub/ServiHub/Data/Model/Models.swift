@@ -16,8 +16,8 @@ struct Service: Codable {
     let id: UUID
     let category: Category
     let name: String
-    let note: Float?
-    let distance: Float?
+    let info: String
+    let imageURL: String
 }
 
 struct ServiceCategory {

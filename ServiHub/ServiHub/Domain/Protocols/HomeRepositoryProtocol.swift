@@ -10,4 +10,5 @@ import Foundation
 // MARK: - HomeRepositoryProtocol
 protocol HomeRepositoryProtocol {
     func getAllServices() async throws -> [Service]
+    func getAllCategories() async throws -> [Category]
 }
