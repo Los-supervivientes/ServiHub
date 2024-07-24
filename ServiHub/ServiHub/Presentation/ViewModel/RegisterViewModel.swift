@@ -82,7 +82,6 @@ final class RegisterViewModel: ObservableObject{
             return "Error campo country Vacio"
             
         }
-        //            self.rootStatus = .loading
         self.rootViewModel.rootStatus = .loading
         RegisterApp(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: categoryBusiness ?? "", companyName: companyName, nif: nif)
         
@@ -98,7 +97,7 @@ final class RegisterViewModel: ObservableObject{
     
     //MARK: - CheckPasswordRegister
     private func isValid(password: String) -> Bool {
-        password.isEmpty == false && password.count >= 4
+        password.isEmpty == false && password.count >= 8
     }
     
     //MARK: - CheckGenericTextField

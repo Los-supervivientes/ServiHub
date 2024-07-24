@@ -10,7 +10,6 @@ import Foundation
 
 // MARK: - CategoriesModelElement
 struct CategoriesModel: Codable, Identifiable {
-    let description: String?
     let id, name: String
 }
 

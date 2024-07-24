@@ -166,9 +166,8 @@ struct RegisterView: View {
                             Picker("", selection: $selectedItem) {
                                 if let typeCategories = viewModel.categories {
                                     ForEach(typeCategories) { index in
-                                        if index.description != nil  {
                                             Text(index.name).tag(index.name)
-                                        }
+                                        
                                     }
                                 }
                             }

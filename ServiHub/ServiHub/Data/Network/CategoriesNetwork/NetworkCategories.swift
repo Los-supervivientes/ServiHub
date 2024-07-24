@@ -45,7 +45,7 @@ final class NetworkCategories: NetworkCategoriesProtocol {
 public final class NetworkCategoriesFake: NetworkCategoriesProtocol {
     public init(){}
     func getCategories() async -> [CategoriesModel] {
-        let categories =  [ CategoriesModel(description: "Categoría principal de Hogar y Jardín.",
+        let categories =  [ CategoriesModel(
                                           id: "",
                                           name: "Hogar y Jardín")
       ]
