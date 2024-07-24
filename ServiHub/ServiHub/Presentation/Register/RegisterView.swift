@@ -386,8 +386,7 @@ struct RegisterView: View {
 
 
 #Preview {
-    RegisterView(viewModel: RegisterViewModel(network: CategoriesUseCaseFake()))
-        .environmentObject(LoginViewModel())
+
+    RegisterView(viewModel: RegisterViewModel(rootViewModel: LoginViewModel(), network: CategoriesUseCaseFake()))
     // Indicamos que se muestre la vista en modo día por defecto
-        .preferredColorScheme(.light)
-}
+        .preferredColorScheme(.light)}

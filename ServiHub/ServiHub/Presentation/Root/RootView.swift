@@ -24,7 +24,7 @@ struct RootView: View {
             LoadingView()
         case .register:
             // Vista registro usuario/empresa
-            RegisterView(viewModel: RegisterViewModel())
+            RegisterView(viewModel: RegisterViewModel(rootViewModel: vm))
         case .loaded:
             // Vista pantalla home
             HomeView()

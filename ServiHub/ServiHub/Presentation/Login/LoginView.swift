@@ -69,13 +69,7 @@ struct LoginView: View {
                         .autocapitalization(.none)
                         .shadow(radius: 10, x: 20, y: 10)
                         .opacity(0.8)
-                        .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(CustomColor.secundaryColor, lineWidth: 2))
-                        .padding(.top, 16)
-                        .id(4)
                     
-                   
                     ///Botón de login
                     Button {
                         //Hacemos login en el VM
@@ -94,6 +88,12 @@ struct LoginView: View {
                             
                     }
                     .padding(.top, 32)
+                        .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(CustomColor.secundaryColor, lineWidth: 2))
+                        .padding(.top, 16)
+                        .id(4)
+                    
                     .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
                     .id(5)
                     

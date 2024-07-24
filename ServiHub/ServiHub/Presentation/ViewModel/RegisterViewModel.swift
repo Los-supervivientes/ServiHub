@@ -10,19 +10,23 @@ import Foundation
 
 final class RegisterViewModel: ObservableObject{
     
+    private var rootViewModel: LoginViewModel
+
+    
     @Published var categories: [CategoriesModel]?
     private var registerUseCase: RegisterUseCaseProtocol
     
     private var network: CategoriesUseCaseProtocol
     
-    init(network: CategoriesUseCaseProtocol = CategoriesUseCase(), registerUseCase: RegisterUseCaseProtocol = RegisterUseCase()) {
-        self.network = network
+    init(rootViewModel: LoginViewModel, registerUseCase: RegisterUseCaseProtocol = RegisterUseCase(), network: CategoriesUseCaseProtocol = CategoriesUseCase()) {
+        self.rootViewModel = rootViewModel
         self.registerUseCase = registerUseCase
+        self.network = network
         
         /// Leemos los datos al inicializar
         getServices()
+        
     }
-
     
     ///Función para cargar la lista de Servicios al llamar a la vista
     func getServices(){
@@ -79,6 +83,7 @@ final class RegisterViewModel: ObservableObject{
             
         }
         //            self.rootStatus = .loading
+        self.rootViewModel.rootStatus = .loading
         RegisterApp(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: categoryBusiness ?? "", companyName: companyName, nif: nif)
         
         return ""
@@ -119,14 +124,14 @@ final class RegisterViewModel: ObservableObject{
                 if !result.isEmpty {
                     DispatchQueue.main.async {
                         // Actualiza el estado de la raíz a .loaded o realiza cualquier otra acción necesaria
-                        // self.rootStatus = .loaded
+                        self.rootViewModel.rootStatus = .initial
                     }
                 } else {
                     // Maneja el caso en que el resultado esté vacío, si es necesario
                     print("El resultado está vacío")
                 }
             } catch {
-                // self.rootStatus = .initial
+                self.rootViewModel.rootStatus = .register
                 
             }
         }
