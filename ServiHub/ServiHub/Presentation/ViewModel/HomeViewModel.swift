@@ -14,12 +14,12 @@ final class HomeViewModel: ObservableObject {
     @Published var categories: [Category] = []
     @Published var services: [Service] = []
     @Published var filterServiceByCategory: [ServiceCategory] = []
-    @Published var selectedCategories: Set<Category> = []
+    @Published var selectedCategory: String? = nil
     
     var repo: HomeRepositoryProtocol
     
     //MARK: - FIX AFTER REPOSITORY WORKS
-    init(repo: HomeRepositoryProtocol = HomeRepository(network: NetworkHomeFake())) {
+    init(repo: HomeRepositoryProtocol = HomeRepository(network: NetworkHome())) {
         self.repo = repo
         
         Task {
@@ -36,20 +36,20 @@ final class HomeViewModel: ObservableObject {
     }
     
     func toggleCategoryFilter(_ category: Category) {
-        if selectedCategories.contains(category) {
-            selectedCategories.remove(category)
+        if selectedCategory == category.name {
+            selectedCategory = nil
         } else {
-            selectedCategories.insert(category)
+            selectedCategory = category.name
         }
         applyFilter()
     }
     
     func applyFilter() {
-        if selectedCategories.isEmpty {
-            self.filterServiceByCategory = servicesIntoCategories(services: services)
-        } else {
-            let filteredServices = services.filter { selectedCategories.contains($0.category) }
+        if let category = selectedCategory {
+            let filteredServices = services.filter { $0.category.name == category }
             self.filterServiceByCategory = servicesIntoCategories(services: filteredServices)
+        } else {
+            self.filterServiceByCategory = servicesIntoCategories(services: services)
         }
     }
     

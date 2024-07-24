@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct FilterBar: View {
-    @Binding var selectedCategories: Set<Category>
+    @Binding var selectCategory: String?
     var categories: [Category]
-    var categorySelected: (Category) -> Void
+    var categorySelected: (String) -> Void
+    var clearSelection: () -> Void
     
     private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
     private let thirdColor = Color(red: 179/255, green: 220/255, blue: 217/255)
@@ -19,25 +20,27 @@ struct FilterBar: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack() {
-                Button(action: {
-                    selectedCategories.removeAll()
-                }) {
-                    Text("All")
-                        .padding()
-                        .background(selectedCategories.isEmpty ? thirdColor : secundaryColor)
-                        .foregroundColor(.white)
-                        .cornerRadius(20)
-                }
-                
-                ForEach(categories, id: \.self) { category in
+                if selectCategory != nil, let selectCategory = selectCategory {
                     Button(action: {
-                        categorySelected(category)
+                        clearSelection()
                     }) {
-                        Text(category.name)
+                        Text("Remove filter")
                             .padding()
-                            .background(selectedCategories.contains(category) ? thirdColor : secundaryColor)
+                            .background(thirdColor)
                             .foregroundColor(.white)
                             .cornerRadius(20)
+                    }
+                } else {
+                    ForEach(categories, id: \.self) { category in
+                        Button(action: {
+                            categorySelected(category.name)
+                        }) {
+                            Text(category.name)
+                                .padding()
+                                .background(secundaryColor)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
+                        }
                     }
                 }
             }

@@ -12,29 +12,22 @@ struct ServiceCardView: View {
     
     var body: some View {
         ZStack {
-            AsyncImage(url: URL(string: service.imageURL)) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-            } placeholder: {
-                Image(systemName: "person")
-                    .resizable()
-                    .scaledToFit()
-
-            }
+            Image ("\(service.imageURL)")
+                .resizable()
+                .scaledToFill()
             
             Rectangle()
-                .background(.black.opacity(0.15))
-                .frame(width: 200, height: 20)
-                .offset(y: 65)
+                .frame(width: 250, height: 30)
+                .foregroundColor(.black.opacity(0.6))
+                .offset(y: 75)
                 
             Text(service.name)
                 .font(.headline)
                 .foregroundStyle(.white)
-                .offset(y: 65)
+                .offset(y: 73)
             
         }
-        .frame(width: 200, height: 150)
+        .frame(width: 250, height: 175)
         .background(.blue)
         .cornerRadius(20)
         .padding()
@@ -43,5 +36,5 @@ struct ServiceCardView: View {
 }
 
 #Preview {
-    ServiceCardView(service: Service(id: UUID(), category: Category(id: UUID(), name: "Peluqueria"), name: "La puri", info: "Bienvenidos a la puri. Un luga increible", imageURL: "url"))
+    ServiceCardView(service: Service(id: UUID(), category: Category(id: UUID(), name: "Peluqueria"), name: "La puri", info: "Bienvenidos a la puri. Un luga increible", imageURL: "3"))
 }
