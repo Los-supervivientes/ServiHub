@@ -205,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				42E324F72C392C490072A137 /* LoginUseCase.swift */,
+				367AB2112C4EC5940082774E /* OptionUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -281,6 +282,7 @@
 		52D9903E2C3F04B6007A1EEC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				367AB20E2C4838790082774E /* Options */,
 				52D990312C3F04B6007A1EEC /* Home */,
 				52D990332C3F04B6007A1EEC /* Loading */,
 				52D990362C3F04B6007A1EEC /* Login */,
@@ -297,6 +299,7 @@
 				52D990302C3F04B6007A1EEC /* HomeViewModel.swift */,
 				52D990352C3F04B6007A1EEC /* LoginViewModel.swift */,
 				52D990382C3F04B6007A1EEC /* RegisterViewModel.swift */,
+				367AB2132C4EC5EC0082774E /* OptionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				42E324EF2C39278D0072A137 /* NetworkRequestLogin.swift in Sources */,
 				42E324DF2C3924030072A137 /* HTTPHeader.swift in Sources */,
 				42E324E32C3924200072A137 /* HTTPResponseCodes.swift in Sources */,
+				367AB2102C4838920082774E /* OptionsView.swift in Sources */,
 				52D990472C3F04B6007A1EEC /* RootView.swift in Sources */,
 				42E324E52C39242E0072A137 /* HTTPEndPoints.swift in Sources */,
 				42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */,
@@ -546,8 +550,10 @@
 				248392BA2C484B230060CE04 /* NetworkHome.swift in Sources */,
 				52D990452C3F04B6007A1EEC /* RegisterViewModel.swift in Sources */,
 				42E324E12C39240F0072A137 /* HTTPMethods.swift in Sources */,
+				367AB2122C4EC5940082774E /* OptionUseCase.swift in Sources */,
 				52D9903F2C3F04B6007A1EEC /* HomeView.swift in Sources */,
 				42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */,
+				367AB2142C4EC5EC0082774E /* OptionViewModel.swift in Sources */,
 				52D990422C3F04B6007A1EEC /* LoginView.swift in Sources */,
 				42E324F32C3928040072A137 /* LoginRepository.swift in Sources */,
 				52D990412C3F04B6007A1EEC /* LoadingView.swift in Sources */,
