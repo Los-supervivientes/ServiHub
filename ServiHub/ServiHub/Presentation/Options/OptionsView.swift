@@ -11,6 +11,7 @@ struct OptionsView: View {
     @StateObject private var viewModel: OptionsViewModel
     @State private var showingSheet = false
     @State private var sheetTitle = ""
+    @Environment(\.dismiss) var dismiss
     
     init(viewModel: OptionsViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -172,6 +173,7 @@ struct OptionsView: View {
                             HStack(spacing: 16) {
                                 Button(action: {
                                     viewModel.saveChanges()
+                                    dismiss()
                                 }) {
                                     Text("Guardar")
                                         .font(Font.custom("SF Compact Display", size: 18))
@@ -183,6 +185,7 @@ struct OptionsView: View {
                                 
                                 Button(action: {
                                     viewModel.logout()
+                                    dismiss()
                                 }) {
                                     Text("Logout")
                                         .font(Font.custom("SF Compact Display", size: 18))

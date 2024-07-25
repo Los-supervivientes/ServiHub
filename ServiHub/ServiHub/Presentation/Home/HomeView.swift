@@ -11,8 +11,10 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel: HomeViewModel
+    @State private var showingSheet = false
     
     private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
+    private let colorDarkBG = Color(red: 51/255, green: 75/255, blue: 108/255)
     
     var body: some View {
         NavigationStack {
@@ -22,6 +24,7 @@ struct HomeView: View {
                     .resizable()
                     .ignoresSafeArea()
                     .id(1)
+                
                 
                 VStack(spacing: 16) {
                     FilterBar(selectCategory: $viewModel.selectedCategory, categories: viewModel.allCategories(), categorySelected: { categoryName in
@@ -50,7 +53,7 @@ struct HomeView: View {
                                             .frame(width: 250, height: 175)
                                             .padding()
                                         
-                                            
+                                        
                                     }
                                 }
                             }
@@ -70,7 +73,7 @@ struct HomeView: View {
                                             ServiceCardView(service: service)
                                                 .frame(width: 250, height: 175)
                                                 .padding()
-                                                
+                                            
                                         }
                                     }
                                 }
@@ -79,13 +82,48 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationTitle("HOME")
-            .font(.title)
+            //            .navigationTitle("HOME")
+            //            .font(.title)
             .toolbar {
-                ToolbarItem(placement: .navigation) {
-                    OptionsView(viewModel: OptionsViewModel(useCase: OptionsUseCase()))
+                
+                
+                ToolbarItem(placement: .navigationBarLeading){
+                    Text("HOME")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        print("options")
+                        showingSheet.toggle()
+                        
+                    } label: {
+                        
+                        
+                        Image(systemName: "gear")
+                            .resizable()
+                            .frame(width: 41, height: 38)
+                            .foregroundColor(colorDarkBG)
+                            .padding(.trailing, -20.0)
+                        
+                    }
+                    .sheet(isPresented: $showingSheet) {
+                        VStack{
+                            Capsule()
+                                .fill(colorDarkBG)
+                                .frame(width: 60, height: 3)
+                                .padding(10)
+                            
+                            
+                            OptionsView(viewModel: OptionsViewModel(useCase: OptionsUseCase()))
+                        }
+                    }
+                    .padding(.trailing, 20)
+                    .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+                    
                 }
             }
+            
         }
     }
 }
