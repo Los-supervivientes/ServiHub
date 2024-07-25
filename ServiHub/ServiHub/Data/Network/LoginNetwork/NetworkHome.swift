@@ -12,6 +12,7 @@ import CoreLocation
 protocol NetworkHomeProtocol {
     func getAllServices() async throws -> [Service]
     func getAllCategories() async throws -> [Category]
+    func getCustomServices() async throws -> [Service]
 }
 
 // MARK: - NetworkHome
@@ -44,6 +45,20 @@ final class NetworkHome: NetworkHomeProtocol {
             throw NetworkError.tokenFormatError // errorew de data
         }
         return categoryResponse
+    }
+    
+    func getCustomServices() async throws -> [Service] {
+        let request = try await NetworkRequestHome().requestForGetAllCategories()
+        let (data, response) = try await URLSession.shared.data(for: request)
+            
+        guard let httpResponse = (response as? HTTPURLResponse),
+              httpResponse.getStatusCode() == HTTPResponseCodes.SUCESS else {
+            throw NetworkError.statusCodeError(response.getStatusCode())
+        }
+        guard let customServiceResponse = try? JSONDecoder().decode([Service].self, from: data) else {
+            throw NetworkError.tokenFormatError // errorew de data
+        }
+        return customServiceResponse
     }
     
 }
@@ -110,6 +125,14 @@ final class NetworkHomeFake: NetworkHomeProtocol {
                 Category(id: UUID(), name: "Fontanero"),
                 Category(id: UUID(), name: "Carpintero"),
                 Category(id: UUID(), name: "Jardinero")
+        ]
+    }
+    
+    func getCustomServices() async throws -> [Service] {
+        return [
+            Service(id: UUID(), category: Category(id: UUID(), name: "Custom"), name: "Keepcoding", info: "dasdasda", imageURL: "keepcoding"),
+            Service(id: UUID(), category: Category(id: UUID(), name: "Custom"), name: "VFX", info: "dasdasda", imageURL: "keepcoding"),
+            Service(id: UUID(), category: Category(id: UUID(), name: "Custom"), name: "ADD NEW", info: "dasdasda", imageURL: "new")
         ]
     }
 }

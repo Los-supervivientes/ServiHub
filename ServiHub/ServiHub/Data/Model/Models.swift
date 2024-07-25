@@ -12,7 +12,7 @@ struct Category: Codable, Hashable {
     let name: String
 }
 
-struct Service: Codable {
+struct Service: Codable, Identifiable {
     let id: UUID
     let category: Category
     let name: String

@@ -34,6 +34,29 @@ struct HomeView: View {
                     .padding(.horizontal, 8)
                     
                     ScrollView(.vertical) {
+                        
+                        if viewModel.typeUser == false {
+                            
+                            Text("Own Services")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .padding(.leading,-175)
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                
+                                HStack(spacing: 8) {
+                                    ForEach(viewModel.ownServices) { service in
+                                        ServiceCardView(service: service)
+                                            .frame(width: 250, height: 175)
+                                            .padding()
+                                        
+                                            
+                                    }
+                                }
+                            }
+                            .background(.secondary)
+                        }
+                        
                         ForEach(viewModel.filterServiceByCategory, id: \.category) { serviceCategory in
                             VStack(alignment: .leading) {
                                 Text(serviceCategory.category.name)
@@ -58,12 +81,17 @@ struct HomeView: View {
             }
             .navigationTitle("HOME")
             .font(.title)
+            .toolbar {
+                ToolbarItem(placement: .navigation) {
+                    OptionsView(viewModel: OptionsViewModel(useCase: OptionsUseCase()))
+                }
+            }
         }
     }
 }
 
 
 #Preview {
-    HomeView(viewModel: HomeViewModel())
+    HomeView(viewModel: HomeViewModel(typeUser: false))
         .preferredColorScheme(.light)
 }

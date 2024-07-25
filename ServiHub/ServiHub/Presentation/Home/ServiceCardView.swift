@@ -19,16 +19,16 @@ struct ServiceCardView: View {
             Rectangle()
                 .frame(width: 250, height: 30)
                 .foregroundColor(.black.opacity(0.6))
-                .offset(y: 75)
+                .offset(y: 80)
                 
             Text(service.name)
                 .font(.headline)
                 .foregroundStyle(.white)
-                .offset(y: 73)
+                .offset(y: 80)
             
         }
-        .frame(width: 250, height: 175)
-        .background(.blue)
+        .frame(width: 250, height: 188)
+        .background(.clear)
         .cornerRadius(20)
         .padding()
         

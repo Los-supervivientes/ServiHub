@@ -10,21 +10,28 @@ import Foundation
 @MainActor
 final class HomeViewModel: ObservableObject {
     
-    @Published var typeUser: Bool = false
+    @Published var typeUser: Bool
     @Published var categories: [Category] = []
     @Published var services: [Service] = []
     @Published var filterServiceByCategory: [ServiceCategory] = []
     @Published var selectedCategory: String? = nil
+    @Published var ownServices : [Service] = []
     
     var repo: HomeRepositoryProtocol
     
     //MARK: - FIX AFTER REPOSITORY WORKS
-    init(repo: HomeRepositoryProtocol = HomeRepository(network: NetworkHome())) {
+    init(repo: HomeRepositoryProtocol = HomeRepository(network: NetworkHomeFake()), typeUser: Bool = true) {
         self.repo = repo
+        self.typeUser = typeUser
         
         Task {
             self.categories = try await repo.getAllCategories()
             self.services = try await repo.getAllServices()
+            
+            if typeUser == false {
+//                categories.insert(Category(id: UUID(), name: "Custom"), at: 0)
+                ownServices = try await repo.getCustomServices()
+            }
             
             self.filterServiceByCategory = servicesIntoCategories(services: self.services)
         }
@@ -55,6 +62,10 @@ final class HomeViewModel: ObservableObject {
     
     func allCategories() -> [Category] {
         return self.categories
-        }
+    }
+    
+    func newCustomSerrvice(){
+        ownServices.append(Service(id: UUID(), category: Category(id: UUID(), name: "Custom"), name: "Keepcoding", info: "dasdasda", imageURL: "keepcoding"))
+    }
     
 }

@@ -10,6 +10,7 @@ import Foundation
 // MARK: - HomeRepository
 final class HomeRepository: HomeRepositoryProtocol {
     
+    
     // MARK: Properties
     private var network: NetworkHomeProtocol
     
@@ -25,6 +26,10 @@ final class HomeRepository: HomeRepositoryProtocol {
     
     func getAllCategories() async throws -> [Category] {
         return try await network.getAllCategories()
+    }
+    
+    func getCustomServices() async throws -> [Service] {
+        return try await network.getCustomServices()
     }
 }
 
@@ -46,6 +51,10 @@ final class HomeRepositoryFake: HomeRepositoryProtocol {
     
     func getAllCategories() async throws -> [Category] {
         return try await network.getAllCategories()
+    }
+    
+    func getCustomServices() async throws -> [Service] {
+        return try await network.getCustomServices()
     }
 }
 
