@@ -28,6 +28,11 @@ struct RootView: View {
         case .loaded:
             // Vista pantalla home
             HomeView()
+        case .error(error: let errorString):
+            // Vista error Login
+            ErrorView(error: errorString) {
+                vm.rootStatus = .initial
+            }
         }
     }
 }

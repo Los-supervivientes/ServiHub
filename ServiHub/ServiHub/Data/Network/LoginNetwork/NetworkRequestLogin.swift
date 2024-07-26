@@ -24,9 +24,14 @@ struct NetworkRequestLogin {
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = HTTPMethods.post
-        request.setValue(HTTPAuthentication.basicCredentials(encodeCredentials),
+        request.httpMethod = HTTPMethods.get
+        request.addValue(ConstantsApp.API_KEY,
+                         forHTTPHeaderField: HTTPHeader.apiKey)
+        request.addValue(HTTPAuthentication.basicCredentials(encodeCredentials),
                          forHTTPHeaderField: HTTPHeader.authorization)
+        request.addValue(HTTPMethods.content,
+                         forHTTPHeaderField: HTTPHeader.contentType)
+        
         return request
     }
 }

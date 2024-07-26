@@ -11,8 +11,8 @@ import KeychainSwift
 // MARK: - Protocol
 protocol LoginUseCaseProtocol {
     func loginApp(user: String, password: String) async throws -> Bool
-    func logout() async -> Void
-    func validateToken() async -> Bool
+    func logout() -> Void
+    func validateToken() -> Bool
 }
 
 // MARK: LoginUseCase
@@ -32,23 +32,29 @@ final class LoginUseCase: LoginUseCaseProtocol {
     // MARK: LoginApp
     func loginApp(user: String, password: String) async throws -> Bool {
         let token = try await repo.loginApp(user: user, password: password)
-        if token != "" {
-            secureData.setToken(token: token, key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+        if token.accessToken != "" {
+            secureData.setToken(token: token.accessToken, key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+            secureData.setToken(token: token.refreshToken, key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
+            secureData.setToken(token: token.userID, key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
             return true
         } else {
-            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
+            secureData.deleteToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
             return false
         }
     }
     
     // MARK: Logout
-    func logout() async {
-        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+    func logout() {
+        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
+        secureData.deleteToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
     }
     
     // MARK: ValidateToken
-    func validateToken() async -> Bool {
-        if secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) != "" {
+    func validateToken() -> Bool {
+        if secureData.getToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN) != "" {
             return true
         } else {
             return false
@@ -74,22 +80,33 @@ final class LoginUseCaseFake: LoginUseCaseProtocol {
     // MARK: LoginApp
     func loginApp(user: String, password: String) async throws -> Bool {
         let token = try await repo.loginApp(user: user, password: password)
-        if token != "" {
-            secureData.setToken(token: token, key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+        
+        if token.accessToken != "" {
+            secureData.setToken(token: token.accessToken, key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+            secureData.setToken(token: token.refreshToken, key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
+            secureData.setToken(token: token.userID, key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
             return true
         } else {
-            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
+            secureData.deleteToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
             return false
         }
     }
     
     // MARK: Logout
-    func logout() async {
-        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN)
+    func logout() {
+        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
+        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
+        secureData.deleteToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
     }
     
     // MARK: ValidateToken
-    func validateToken() async -> Bool {
-        return true
+    func validateToken() -> Bool {
+        if secureData.getToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN) != "" {
+            return true
+        } else {
+            return false
+        }
     }
 }

@@ -18,7 +18,7 @@ final class LoginRepository: LoginRepositoryProtocol {
     }
     
     // MARK: loginApp
-    func loginApp(user: String, password: String) async throws -> String {
+    func loginApp(user: String, password: String) async throws -> LoginModel {
         return try await network.loginApp(user: user, password: password)
     }
 }
@@ -35,7 +35,8 @@ final class LoginRepositoryFake: LoginRepositoryProtocol {
     }
     
     // MARK: loginApp
-    func loginApp(user: String, password: String) async throws -> String {
+    func loginApp(user: String, password: String) async throws -> LoginModel {
         return try await network.loginApp(user: user, password: password)
     }
 }
+
