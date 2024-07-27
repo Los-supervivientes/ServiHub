@@ -49,6 +49,7 @@
 		6E68545B2C518E3D00024804 /* OptionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E68545A2C518E3D00024804 /* OptionUseCase.swift */; };
 		6E6952252C50020900B8E070 /* HomeFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6952242C50020900B8E070 /* HomeFilterBar.swift */; };
 		6E6952272C5002A100B8E070 /* ServiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6952262C5002A100B8E070 /* ServiceCardView.swift */; };
+		6E7283C02C551D4A00AB6728 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7283BF2C551D4A00AB6728 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		6E68545A2C518E3D00024804 /* OptionUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionUseCase.swift; sourceTree = "<group>"; };
 		6E6952242C50020900B8E070 /* HomeFilterBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterBar.swift; sourceTree = "<group>"; };
 		6E6952262C5002A100B8E070 /* ServiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCardView.swift; sourceTree = "<group>"; };
+		6E7283BF2C551D4A00AB6728 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				248392B32C48458B0060CE04 /* Models.swift */,
+				6E7283BF2C551D4A00AB6728 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				52D9903F2C3F04B6007A1EEC /* HomeView.swift in Sources */,
 				42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */,
 				52D990422C3F04B6007A1EEC /* LoginView.swift in Sources */,
+				6E7283C02C551D4A00AB6728 /* LoginModel.swift in Sources */,
 				42E324F32C3928040072A137 /* LoginRepository.swift in Sources */,
 				52D990412C3F04B6007A1EEC /* LoadingView.swift in Sources */,
 				248392B42C48458B0060CE04 /* Models.swift in Sources */,

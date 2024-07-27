@@ -9,9 +9,11 @@
 import Foundation
 
 enum RootStatus {
+    
     case initial
     case loading
     case loaded
     case register
+    case error(error: String)
 
 }

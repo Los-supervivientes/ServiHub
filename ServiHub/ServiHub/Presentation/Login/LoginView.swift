@@ -12,7 +12,7 @@ struct LoginView: View {
     
     @EnvironmentObject var rootViewModel: LoginViewModel
     //Asignamos variables de prueba
-    @State private var email = "die_94_go@hotmail.com"
+    @State private var email = "Boncroix@gmail.com"
     @State private var password = "12345678"
     @State private var error: String = ""
     

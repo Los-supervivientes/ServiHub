@@ -9,7 +9,8 @@ import Foundation
 
 // MARK: - HTTPHeader
 struct HTTPHeader {
+    
     static let contentType = "Content-Type"
     static let authorization = "Authorization"
-    static let sshApiKey = "SSH-ApiKey"
-}
+    static let apiKey = "SSH-ApiKey"
+    }

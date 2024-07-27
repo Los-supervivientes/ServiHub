@@ -9,5 +9,5 @@ import Foundation
 
 // MARK: - LoginRepositoryProtocol
 protocol LoginRepositoryProtocol {
-    func loginApp(user: String, password: String) async throws -> String
+    func loginApp(user: String, password: String) async throws -> LoginModel
 }

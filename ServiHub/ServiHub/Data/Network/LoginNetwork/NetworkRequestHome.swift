@@ -25,14 +25,14 @@ struct NetworkRequestHome {
             throw NetworkError.malformedURL
         }
         
-        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
+        guard let token = secureData.getToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN) else {
            throw NetworkError.tokenFormatError
             
         }
         
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethods.post
-        request.setValue(ConstantsApp.SSH_APIKEY, forHTTPHeaderField: HTTPHeader.sshApiKey)
+        request.setValue(ConstantsApp.API_KEY, forHTTPHeaderField: HTTPHeader.apiKey)
         request.setValue(HTTPAuthentication.bearerToken(token),
                          forHTTPHeaderField: HTTPHeader.authorization)
 
@@ -45,14 +45,14 @@ struct NetworkRequestHome {
             throw NetworkError.malformedURL
         }
         
-        guard let token = secureData.getToken(key: ConstantsApp.CONST_TOKEN_ID_KEYCHAIN) else {
+        guard let token = secureData.getToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN) else {
            throw NetworkError.tokenFormatError
             
         }
         
         var request = URLRequest(url: url)
         request.httpMethod = HTTPMethods.post
-        request.setValue(ConstantsApp.SSH_APIKEY, forHTTPHeaderField: HTTPHeader.sshApiKey)
+        request.setValue(ConstantsApp.API_KEY, forHTTPHeaderField: HTTPHeader.apiKey)
         request.setValue(HTTPAuthentication.bearerToken(token),
                          forHTTPHeaderField: HTTPHeader.authorization)
 
