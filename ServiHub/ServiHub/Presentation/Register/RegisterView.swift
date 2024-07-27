@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+
 struct RegisterView: View {
     
     @EnvironmentObject var rootViewModel: LoginViewModel
+    @StateObject var viewModel: RegisterViewModel
     
     @State var typeUser: Bool = false
     
@@ -27,13 +29,13 @@ struct RegisterView: View {
     @State private var state: String = ""
     @State private var postalCode: String = ""
     @State private var country: String = ""
-    @State private var categiryBusiness: String = ""
+    @State private var categoryBusiness: String = ""
     @State private var companyName: String = ""
     @State private var nif: String = ""
+    @State private var selectedItem: String = ""
+
+
     
-    private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
-    private let colorLightUB = Color(red: 227/255, green: 252/255, blue: 255/255)
-    private let colorDarkBG = Color(red: 51/255, green: 75/255, blue: 108/255)
     
     var body: some View {
         
@@ -44,284 +46,346 @@ struct RegisterView: View {
                 .id(1)
             
             VStack{
-                Spacer()
+               
                 ///Boton Efectuar Registro
-                
+                ///
                 VStack{
                     Toggle("",isOn: $typeUser)
                         .labelsHidden() // Oculta la etiqueta del Toggle
-                        .toggleStyle(SwitchToggleStyle(tint: self.colorLightUB)) // Cambia el color del Toggle si deseas
+                        .toggleStyle(SwitchToggleStyle(tint: CustomColor.colorLightUB)) // Cambia el color del Toggle si deseas
                     if typeUser {
                         Text("Personal")
-                            .foregroundStyle(self.colorLightUB)
+                            .foregroundStyle(CustomColor.colorLightUB)
                     }else{
                         Text("Profesional")
-                            .foregroundStyle(self.colorDarkBG)
+                            .foregroundStyle(CustomColor.colorDarkBG)
                     }
-                }
-                
-                
-                ///Campo de texto para añadir el Name
-                VStack {
-                    HStack() {
-                        Image(.iconPerson) // Icono a la izquierda
-                            .frame(width: 24, height: 25)
-                            .id(0)
-                        
-                        TextField("Name", text: self.$name)
-                            .foregroundStyle(self.secundaryColor) // Color del texto
-                            .autocorrectionDisabled()
-                            .background(Color.clear) // Fondo transparente
-                            .id(0)
-                    }
-                    .foregroundColor(.blue)
-                    .frame(width: 326, height: 35)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(self.secundaryColor, lineWidth: 2) // Borde del color secundario
-                            .frame(height: 2) // Altura del borde inferior
-                            .padding(.top, 33) // Espacio para que quede alineado con el texto
-                        
-                    )
-                }
-                .padding(.top, 36)
-                
-                ///Campo de texto para añadir el SurName
-                VStack {
-                    HStack() {
-                        Image(.iconPerson) // Icono a la izquierda
-                            .frame(width: 24, height: 25)
-                            .id(0)
-                        
-                        TextField("SurName", text: self.$firstSurname)
-                            .foregroundStyle(self.secundaryColor) // Color del texto
-                            .autocorrectionDisabled()
-                            .background(Color.clear) // Fondo transparente
-                            .id(0)
-                    }
-                    .frame(width: 326, height: 35)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(self.secundaryColor, lineWidth: 2) // Borde del color secundario
-                            .frame(height: 2) // Altura del borde inferior
-                            .padding(.top, 33) // Espacio para que quede alineado con el texto
-                        
-                    )
-                }
-                .padding(.top, 16)
-                
-                ///Campo de texto para añadir el secondSurname
-                VStack {
-                    HStack() {
-                        Image(.iconPerson) // Icono a la izquierda
-                            .frame(width: 24, height: 25)
-                            .id(0)
-                        
-                        TextField("Last Name (optional)", text: self.$secondSurname)
-                            .foregroundStyle(self.secundaryColor) // Color del texto
-                            .autocorrectionDisabled()
-                            .background(Color.clear) // Fondo transparente
-                            .id(0)
-                    }
-                    .frame(width: 326, height: 35)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(self.secundaryColor, lineWidth: 2) // Borde del color secundario
-                            .frame(height: 2) // Altura del borde inferior
-                            .padding(.top, 33) // Espacio para que quede alineado con el texto
-                        
-                    )
-                }
-                .padding(.top, 16)
-                
-                ///Campo de texto para añadir el Mobile
-                VStack {
-                    HStack() {
-                        Image(.iconPhone) // Icono a la izquierda
-                            .frame(width: 24, height: 25)
-                            .id(0)
-                        
-                        TextField("Mobile", text: self.$mobile)
-                            .foregroundStyle(self.secundaryColor) // Color del texto
-                            .autocorrectionDisabled()
-                            .background(Color.clear) // Fondo transparente
-                            .id(0)
-                    }
-                    .frame(width: 326, height: 35)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(self.secundaryColor, lineWidth: 2) // Borde del color secundario
-                            .frame(height: 2) // Altura del borde inferior
-                            .padding(.top, 33) // Espacio para que quede alineado con el texto
-                        
-                    )
-                }
-                .padding(.top, 16)
-                
-                ///Campo de texto para añadir el email
-                VStack {
-                    HStack() {
-                        Image(.iconEmail) // Icono a la izquierda
-                            .frame(width: 24, height: 25)
-                            .id(0)
-                        
-                        TextField("Email", text: self.$email)
-                            .foregroundStyle(self.secundaryColor) // Color del texto
-                            .autocorrectionDisabled()
-                            .background(Color.clear) // Fondo transparente
-                            .id(0)
-                    }
-                    .frame(width: 326, height: 35)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(self.secundaryColor, lineWidth: 2) // Borde del color secundario
-                            .frame(height: 2) // Altura del borde inferior
-                            .padding(.top, 33) // Espacio para que quede alineado con el texto
-                        
-                    )
-                }
-                .padding(.top, 16)
-                
-                ///Campo de texto para añadir el password
-                VStack {
-                    HStack() {
-                        Image(.iconLock) // Icono a la izquierd
-                            .frame(width: 24, height: 25)
-                            .id(0)
-                        
-                        TextField("Password", text: self.$password)
-                            .foregroundStyle(self.secundaryColor) // Color del texto
-                            .autocorrectionDisabled()
-                            .background(Color.clear) // Fondo transparente
-                            .id(0)
-                    }
-                    .frame(width: 326, height: 35)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(self.secundaryColor, lineWidth: 2) // Borde del color secundario
-                            .frame(height: 2) // Altura del borde inferior
-                            .padding(.top, 33) // Espacio para que quede alineado con el texto
-                        
-                    )
-                }
-                .padding(.top, 16)
-                
-                
-                
-                
-                VStack{
-                    Button {
-                        ///Enviamos los datos y volvemos al login
-                        self.rootViewModel.rootStatus =  .initial
-                    } label: {
-                        
-                        ///Definimos las propiedades del botón de registrame
-                        Text("Register")
-                            .font(.title2)
-                            .foregroundStyle(.white)
-                            .frame(width: 204, height: 50)
-                            .background(self.secundaryColor)
-                            .cornerRadius(10)
-                            .shadow(radius: 10,x:10, y:10)
-                        
-                    }
-                    .id(5)
-                    
                 }
                 .padding(.top, 54)
-                
-                ///Boton Efectuar Registro con id Apple
-                VStack{
-                    Button {
-                        ///Enviamos los datos y volvemos al login
+                ScrollView{
+                    VStack{
+                        HStack{
+                            Text("Info Básica")
+                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .padding(.leading, 32)
+                                .foregroundColor(CustomColor.colorPrimaryDarken)
+                            Spacer()
+                        }
+                    }
+                    .padding(.top, 54)
+                    
+                    
+                    ///Campo de texto para añadir el Name
+                    VStack {
+                        CustomField(
+                            text: $name, // Variable
+                            icon: Image(.iconPerson), // Icono TextField
+                            placeholder: "Name", // Texto de fondo
+                            borderColor: CustomColor.secundaryColor, // Color del borde
+                            textColor: CustomColor.secundaryColor // Color del texto
+                        )
+                    }
+                    .padding(.top, 16)
+                    
+                    ///Campo de texto para añadir el SurName
+                    VStack {
+                        CustomField(
+                            text: $firstSurname, // Variable
+                            icon: Image(.iconPerson), // Icono TextField
+                            placeholder: "SurName", // Texto de fondo
+                            borderColor: CustomColor.secundaryColor, // Color del borde
+                            textColor: CustomColor.secundaryColor // Color del texto
+                        )
+                    }
+                    .padding(.top, 16)
+                    
+                    ///Campo de texto para añadir el secondSurname
+                    VStack {
+                        CustomField(
+                            text: $secondSurname, // Variable
+                            icon: Image(.iconPerson), // Icono TextField
+                            placeholder: "Last Name (optional)", // Texto de fondo
+                            borderColor: CustomColor.secundaryColor, // Color del borde
+                            textColor: CustomColor.secundaryColor // Color del texto
+                        )
+                    }
+                    .padding(.top, 16)
+                    
+                    ///Campo de texto para añadir el Mobile
+                    VStack {
+                        CustomField(
+                            text: $mobile, // Variable
+                            icon: Image(.iconPhone), // Icono TextField
+                            placeholder: "Mobile", // Texto de fondo
+                            borderColor: CustomColor.secundaryColor, // Color del borde
+                            textColor: CustomColor.secundaryColor // Color del texto
+                        )
+                    }
+                    .padding(.top, 16)
+                    
+                    
+                    ///Campo de texto para añadir el email
+                    VStack {
+                        CustomField(
+                            text: $email, // Variable
+                            icon: Image(.iconEmail), // Icono TextField
+                            placeholder: "Email", // Texto de fondo
+                            borderColor: CustomColor.secundaryColor, // Color del borde
+                            textColor: CustomColor.secundaryColor // Color del texto
+                        )
+                    }
+                    .padding(.top, 16)
+                    
+                    ///Campo de texto para añadir el password
+                    VStack {
+                        CustomField(
+                            text: $password, // Variable
+                            icon: Image(.iconLock), // Icono TextField
+                            placeholder: "Password", // Texto de fondo
+                            borderColor: CustomColor.secundaryColor, // Color del borde
+                            textColor: CustomColor.secundaryColor // Color del texto
+                        )
+                    }
+                    .padding(.top, 16)
+                    
+                    /// Elegimos entre usuario o profesional
+                    if !typeUser {
                         
-                        self.rootViewModel.rootStatus =  .initial
-                    } label: {
+                        VStack{
+                            HStack{
+                                Text("Info Profesional")
+                                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                    .padding(.leading, 32)
+                                    .foregroundColor(CustomColor.colorPrimaryDarken)
+                                Spacer()
+                            }
+                        }
+                        .padding(.top, 54)
                         
-                        ///Definimos las propiedades del botón registrame con id de Apple
-                        HStack {
-                            Image(.appleiconApple) // Icono a la izquierda
-                                .font(.title2)
-                                .foregroundStyle(.white)
-                                .frame(width: 21, height: 23)
-                                .offset(x: 24)
+                        VStack{
+                            Picker("", selection: $selectedItem) {
+                                if let typeCategories = viewModel.categories {
+                                    ForEach(typeCategories) { index in
+                                            Text(index.name).tag(index.name)
+                                        
+                                    }
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                            .frame(width: 326, height: 35)
+                            .background(CustomColor.colorLightUB) // Fondo blanco
+                            .cornerRadius(10)
+                        }
+                        
+                        ///Campo de texto para añadir el Nombre del servicio
+                        VStack {
+                            CustomField(
+                                text: $companyName, // Variable
+                                icon: Image(.iconPerson), // Icono TextField
+                                placeholder: "Name of service", // Texto de fondo
+                                borderColor: CustomColor.secundaryColor, // Color del borde
+                                textColor: CustomColor.secundaryColor // Color del texto
+                            )
+                        }
+                        .padding(.top, 16)
+                        
+                        ///Campo de texto para añadir el NIF
+                        VStack {
+                            CustomField(
+                                text: $nif, // Variable
+                                icon: Image(.iconPerson), // Icono TextField
+                                placeholder: "DNI/NIF", // Texto de fondo
+                                borderColor: CustomColor.secundaryColor, // Color del borde
+                                textColor: CustomColor.secundaryColor // Color del texto
+                            )
+                        }
+                        .padding(.top, 16)
+                        
+                        ///Campo de texto para añadir la calle
+                        VStack {
+                            CustomField(
+                                text: $street, // Variable
+                                icon: Image(.iconLocation), // Icono TextField
+                                placeholder: "Street", // Texto de fondo
+                                borderColor: CustomColor.secundaryColor, // Color del borde
+                                textColor: CustomColor.secundaryColor // Color del texto
+                            )
+                        }
+                        .padding(.top, 16)
+                        
+                        
+                        ///Campo de texto para añadir la ciudad
+                        VStack {
+                            CustomField(
+                                text: $city, // Variable
+                                icon: Image(.iconLocation), // Icono TextField
+                                placeholder: "City", // Texto de fondo
+                                borderColor: CustomColor.secundaryColor, // Color del borde
+                                textColor: CustomColor.secundaryColor // Color del texto
+                            )
+                        }
+                        .padding(.top, 16)
+                        
+                        ///Campo de texto para añadir el estado
+                        VStack {
+                            CustomField(
+                                text: $state, // Variable
+                                icon: Image(.iconLocation), // Icono TextField
+                                placeholder: "State", // Texto de fondo
+                                borderColor: CustomColor.secundaryColor, // Color del borde
+                                textColor: CustomColor.secundaryColor // Color del texto
+                            )
+                        }
+                        .padding(.top, 16)
+                        
+                        ///Campo de texto para añadir el código postal
+                        VStack {
+                            CustomField(
+                                text: $postalCode, // Variable
+                                icon: Image(.iconLocation), // Icono TextField
+                                placeholder: "Postal Code", // Texto de fondo
+                                borderColor: CustomColor.secundaryColor, // Color del borde
+                                textColor: CustomColor.secundaryColor // Color del texto
+                            )
+                        }
+                        .padding(.top, 16)
+                        
+                        ///Campo de texto para añadir el country
+                        VStack {
+                            CustomField(
+                                text: $country, // Variable
+                                icon: Image(.iconLocation), // Icono TextField
+                                placeholder: "Country", // Texto de fondo
+                                borderColor: CustomColor.secundaryColor, // Color del borde
+                                textColor: CustomColor.secundaryColor // Color del texto
+                            )
+                        }
+                        .padding(.top, 16)
+                    }
+                    
+                    
+                    VStack{
+                        Button {
+                            ///Enviamos los datos y volvemos al login
+                           _ = viewModel.onRegisterButton(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: selectedItem, companyName: companyName, nif: nif)
                             
-                            Text("Register with Apple")
-                                .font(.system(size: 17))
+                        } label: {
+                            
+                            ///Definimos las propiedades del botón de registrame
+                            Text("Register")
+                                .font(.title2)
                                 .foregroundStyle(.white)
                                 .frame(width: 204, height: 50)
+                                .background(CustomColor.secundaryColor)
+                                .cornerRadius(10)
+                                .shadow(radius: 10,x:10, y:10)
                             
                         }
-                        .background(self.secundaryColor)
-                        .frame(width: 204, height: 50)
-                        .cornerRadius(10)
-                        .shadow(radius: 10, x: 10, y: 10)
+                        .id(5)
                         
                     }
-                    .padding(.top, 16)
-                    .id(5)
-                }
-                
-                
-                ///Boton Efectuar Registro con id de google
-                VStack{
-                    Button {
-                        ///Enviamos los datos y volvemos al login
-                        
-                        self.rootViewModel.rootStatus =  .initial
-                    } label: {
-                        
-                        ///Definimos las propiedades del botón registrame con id de Google
-                        HStack {
-                            Image(.iconGoogle) // Icono a la izquierda
-                                .font(.title2)
-                                .foregroundStyle(.white)
-                                .frame(width: 21, height: 23)
-                                .offset(x: 24)
+                    .padding(.top, 54)
+                    
+                    ///Boton Efectuar Registro con id Apple
+                    VStack{
+                        Button {
+                            ///Enviamos los datos y volvemos al login
                             
-                            Text("Register with Google")
-                                .font(.system(size: 17))
-                                .foregroundStyle(.white)
-                                .frame(width: 201, height: 48)
+                            self.rootViewModel.rootStatus =  .initial
+                        } label: {
+                            
+                            ///Definimos las propiedades del botón registrame con id de Apple
+                            HStack {
+                                Image(.appleiconApple) // Icono a la izquierda
+                                    .font(.title2)
+                                    .foregroundStyle(.white)
+                                    .frame(width: 21, height: 23)
+                                    .offset(x: 24)
+                                
+                                Text("Register with Apple")
+                                    .font(.system(size: 17))
+                                    .foregroundStyle(.white)
+                                    .frame(width: 204, height: 50)
+                                
+                            }
+                            .background(CustomColor.secundaryColor)
+                            .frame(width: 204, height: 50)
+                            .cornerRadius(10)
+                            .shadow(radius: 10, x: 10, y: 10)
                             
                         }
-                        .background(self.secundaryColor)
-                        .frame(width: 201, height: 48)
-                        .cornerRadius(10)
-                        .shadow(radius: 10, x: 10, y: 10)
-                        
+                        .padding(.top, 16)
+                        .id(5)
+                    }
+                    
+                    
+                    ///Boton Efectuar Registro con id de google
+                    VStack{
+                        Button {
+                            ///Enviamos los datos y volvemos al login
+                            
+                            self.rootViewModel.rootStatus =  .initial
+                        } label: {
+                            
+                            ///Definimos las propiedades del botón registrame con id de Google
+                            HStack {
+                                Image(.iconGoogle) // Icono a la izquierda
+                                    .font(.title2)
+                                    .foregroundStyle(.white)
+                                    .frame(width: 21, height: 23)
+                                    .offset(x: 24)
+                                
+                                Text("Register with Google")
+                                    .font(.system(size: 17))
+                                    .foregroundStyle(.white)
+                                    .frame(width: 201, height: 48)
+                                
+                            }
+                            .background(CustomColor.secundaryColor)
+                            .frame(width: 201, height: 48)
+                            .cornerRadius(10)
+                            .shadow(radius: 10, x: 10, y: 10)
+                            
+                        }
+                        .padding(.top, 16)
+                        .id(5)
+                    }
+                    
+                    ///Boton para ir a la pantalla de registro
+                    VStack{
+                        Button(action: {
+                            //Cambiamos a la pantalla de degistro
+                            self.rootViewModel.rootStatus = .initial
+                        }, label: {
+                            Text("or Signup here")
+                                .underline()
+                                .foregroundStyle(Color(red: 122/255, green: 154/255, blue: 199/255))
+                        })
+                        .id(6)
                     }
                     .padding(.top, 16)
-                    .id(5)
+                    
+                    Spacer()
                 }
-                
-                ///Boton para ir a la pantalla de registro
-                VStack{
-                    Button(action: {
-                        //Cambiamos a la pantalla de degistro
-                        self.rootViewModel.rootStatus = .initial
-                    }, label: {
-                        Text("or Signup here")
-                            .underline()
-                            .foregroundStyle(Color(red: 122/255, green: 154/255, blue: 199/255))
-                    })
-                    .id(6)
-                }
-                .padding(.top, 16)
-                
-                Spacer()
-                
+
             }
+
         }
         .ignoresSafeArea()
+        .onReceive(viewModel.$categories) { categories in
+            // Cargo un valor inicial a SelectedItem para asegurarme de que el Picker tiene un valor válido por defecto.0
+            if let firstCategory = categories?.first {
+                selectedItem = firstCategory.name
+            }
+        }
     }
 }
 
 
+
+
 #Preview {
-    
-    RegisterView()
+
+    RegisterView(viewModel: RegisterViewModel(rootViewModel: LoginViewModel(), network: CategoriesUseCaseFake()))
     // Indicamos que se muestre la vista en modo día por defecto
-        .preferredColorScheme(.light)
-    
-}
+        .preferredColorScheme(.light)}

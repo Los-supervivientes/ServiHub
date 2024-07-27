@@ -34,13 +34,9 @@ final class LoginUseCase: LoginUseCaseProtocol {
         let token = try await repo.loginApp(user: user, password: password)
         if token.accessToken != "" {
             secureData.setToken(token: token.accessToken, key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-            secureData.setToken(token: token.refreshToken, key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
-            secureData.setToken(token: token.userID, key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
             return true
         } else {
             secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
-            secureData.deleteToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
             return false
         }
     }
@@ -48,8 +44,6 @@ final class LoginUseCase: LoginUseCaseProtocol {
     // MARK: Logout
     func logout() {
         secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
-        secureData.deleteToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
     }
     
     // MARK: ValidateToken
@@ -80,16 +74,11 @@ final class LoginUseCaseFake: LoginUseCaseProtocol {
     // MARK: LoginApp
     func loginApp(user: String, password: String) async throws -> Bool {
         let token = try await repo.loginApp(user: user, password: password)
-        
         if token.accessToken != "" {
             secureData.setToken(token: token.accessToken, key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-            secureData.setToken(token: token.refreshToken, key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
-            secureData.setToken(token: token.userID, key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
             return true
         } else {
             secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-            secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
-            secureData.deleteToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
             return false
         }
     }
@@ -97,8 +86,6 @@ final class LoginUseCaseFake: LoginUseCaseProtocol {
     // MARK: Logout
     func logout() {
         secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_ACCESS_KEYCHAIN)
-        secureData.deleteToken(key: ConstantsApp.CONST_TOKEN_REFRESH_KEYCHAIN)
-        secureData.deleteToken(key: ConstantsApp.CONST_USER_ID_KEYCHAIN)
     }
     
     // MARK: ValidateToken

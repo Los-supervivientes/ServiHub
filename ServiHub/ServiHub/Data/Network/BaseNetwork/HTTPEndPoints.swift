@@ -11,4 +11,7 @@ import Foundation
 enum HTTPEndPoints: String {
     case login = "/auth/signin"
     case allServices = ""
+    case categories = "/categories"
+    case registerUser = "/auth/signup"
+    case registerProf = "/auth/profsignup"
 }

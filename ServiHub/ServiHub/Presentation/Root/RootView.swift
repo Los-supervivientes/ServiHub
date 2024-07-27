@@ -24,15 +24,18 @@ struct RootView: View {
             LoadingView()
         case .register:
             // Vista registro usuario/empresa
-            RegisterView()
+            RegisterView(viewModel: RegisterViewModel(rootViewModel: vm))
         case .loaded:
             // Vista pantalla home
-            HomeView()
+            HomeView(viewModel: HomeViewModel())
         case .error(error: let errorString):
+            LoadingView()
             // Vista error Login
+            /*
             ErrorView(error: errorString) {
                 vm.rootStatus = .initial
             }
+             */
         }
     }
 }
