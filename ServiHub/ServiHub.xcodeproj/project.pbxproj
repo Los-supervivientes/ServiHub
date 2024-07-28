@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		422262252C4A59A700F52002 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422262242C4A59A700F52002 /* LoginModel.swift */; };
-		422262282C4BC7D300F52002 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422262272C4BC7D300F52002 /* ErrorView.swift */; };
+		42484FC02C56A9EE0087E30A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42484FBF2C56A9EE0087E30A /* ErrorView.swift */; };
 		42E324D52C39226B0072A137 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 42E324D42C39226B0072A137 /* ViewInspector */; };
 		42E324DB2C3923E70072A137 /* NetworError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DA2C3923E70072A137 /* NetworError.swift */; };
 		42E324DD2C3923F80072A137 /* HTTPAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */; };
@@ -62,7 +62,7 @@
 /* Begin PBXFileReference section */
 		4203A5482C3DA0AF0099E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		422262242C4A59A700F52002 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		422262272C4BC7D300F52002 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorView.swift; path = ../../../../../Practica_DesarrolloSeguro_J.Bueno/ErrorView.swift; sourceTree = "<group>"; };
+		42484FBF2C56A9EE0087E30A /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		42E324DA2C3923E70072A137 /* NetworError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworError.swift; sourceTree = "<group>"; };
 		42E324DC2C3923F80072A137 /* HTTPAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPAuthentication.swift; sourceTree = "<group>"; };
 		42E324DE2C3924030072A137 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		422262262C4BC7B000F52002 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				422262272C4BC7D300F52002 /* ErrorView.swift */,
+				42484FBF2C56A9EE0087E30A /* ErrorView.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -522,11 +522,11 @@
 				52D990442C3F04B6007A1EEC /* RegisterView.swift in Sources */,
 				42E324EF2C39278D0072A137 /* NetworkRequestLogin.swift in Sources */,
 				42E324DF2C3924030072A137 /* HTTPHeader.swift in Sources */,
+				42484FC02C56A9EE0087E30A /* ErrorView.swift in Sources */,
 				42E324E32C3924200072A137 /* HTTPResponseCodes.swift in Sources */,
 				52D990472C3F04B6007A1EEC /* RootView.swift in Sources */,
 				42E324E52C39242E0072A137 /* HTTPEndPoints.swift in Sources */,
 				422262252C4A59A700F52002 /* LoginModel.swift in Sources */,
-				422262282C4BC7D300F52002 /* ErrorView.swift in Sources */,
 				42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */,
 				52D990432C3F04B6007A1EEC /* LoginViewModel.swift in Sources */,
 				42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */,
