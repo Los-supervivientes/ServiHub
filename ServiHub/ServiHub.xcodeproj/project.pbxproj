@@ -27,6 +27,7 @@
 		42E324F52C3928320072A137 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */; };
 		42E324F82C392C490072A137 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324F72C392C490072A137 /* LoginUseCase.swift */; };
 		42E324FB2C3937500072A137 /* SecureDataKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E324FA2C3937500072A137 /* SecureDataKeychain.swift */; };
+		521ECB322C56A50900C15298 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ECB312C56A50900C15298 /* ErrorView.swift */; };
 		525FB2182C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 525FB2172C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf */; };
 		52D9902D2C3F04A7007A1EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D990292C3F04A7007A1EEC /* Assets.xcassets */; };
 		52D9902E2C3F04A7007A1EEC /* ServiHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9902A2C3F04A7007A1EEC /* ServiHubApp.swift */; };
@@ -103,6 +104,7 @@
 		42E324F42C3928320072A137 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
 		42E324F72C392C490072A137 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		42E324FA2C3937500072A137 /* SecureDataKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataKeychain.swift; sourceTree = "<group>"; };
+		521ECB312C56A50900C15298 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		525FB2172C42776400BC754C /* Grandstander-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grandstander-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		52D990292C3F04A7007A1EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D9902A2C3F04A7007A1EEC /* ServiHubApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiHubApp.swift; sourceTree = "<group>"; };
@@ -264,6 +266,14 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		521ECB302C56A4F600C15298 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				521ECB312C56A50900C15298 /* ErrorView.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		52D990272C3F04A7007A1EEC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +344,7 @@
 				52D990332C3F04B6007A1EEC /* Loading */,
 				52D990362C3F04B6007A1EEC /* Login */,
 				52D990392C3F04B6007A1EEC /* Register */,
+				521ECB302C56A4F600C15298 /* Error */,
 				52D9903D2C3F04B6007A1EEC /* Root */,
 				52D9904A2C3F116B007A1EEC /* ViewModel */,
 			);
@@ -343,10 +354,10 @@
 		52D9904A2C3F116B007A1EEC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				6E6854582C518D7800024804 /* OptionViewModel.swift */,
-				52D990302C3F04B6007A1EEC /* HomeViewModel.swift */,
 				52D990352C3F04B6007A1EEC /* LoginViewModel.swift */,
 				52D990382C3F04B6007A1EEC /* RegisterViewModel.swift */,
+				52D990302C3F04B6007A1EEC /* HomeViewModel.swift */,
+				6E6854582C518D7800024804 /* OptionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -632,6 +643,7 @@
 				52D990462C3F04B6007A1EEC /* RootStatus.swift in Sources */,
 				42E324EA2C39264D0072A137 /* URLReponse+Extension.swift in Sources */,
 				6E6952252C50020900B8E070 /* HomeFilterBar.swift in Sources */,
+				521ECB322C56A50900C15298 /* ErrorView.swift in Sources */,
 				52D990442C3F04B6007A1EEC /* RegisterView.swift in Sources */,
 				6E7283E52C55251400AB6728 /* CustomField.swift in Sources */,
 				42E324EF2C39278D0072A137 /* NetworkRequestLogin.swift in Sources */,
@@ -837,7 +849,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App\"";
-				DEVELOPMENT_TEAM = M26LNJLX8T;
+				DEVELOPMENT_TEAM = 8Z9R3793D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ServiHub/Info.plist;
@@ -855,7 +867,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Lospervivientes.ServiHub;
+				PRODUCT_BUNDLE_IDENTIFIER = comLospervivientes.ServiHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
@@ -876,7 +888,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ServiHub/App\"";
-				DEVELOPMENT_TEAM = M26LNJLX8T;
+				DEVELOPMENT_TEAM = 8Z9R3793D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ServiHub/Info.plist;
@@ -894,7 +906,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Lospervivientes.ServiHub;
+				PRODUCT_BUNDLE_IDENTIFIER = comLospervivientes.ServiHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";

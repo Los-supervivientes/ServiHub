@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+//MARK: - RegisterView
 struct RegisterView: View {
     
     @EnvironmentObject var rootViewModel: LoginViewModel
@@ -267,8 +267,10 @@ struct RegisterView: View {
                     VStack{
                         Button {
                             ///Enviamos los datos y volvemos al login
-                           _ = viewModel.onRegisterButton(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: selectedItem, companyName: companyName, nif: nif)
-                            
+                           var data = viewModel.onRegisterButton(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: selectedItem, companyName: companyName, nif: nif)
+                            if !data.isEmpty {
+                                self.rootViewModel.rootStatus =  .error(error: data)
+                            }
                         } label: {
                             
                             ///Definimos las propiedades del botón de registrame

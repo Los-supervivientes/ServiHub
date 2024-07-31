@@ -13,8 +13,6 @@ struct FilterBar: View {
     var categorySelected: (String) -> Void
     var clearSelection: () -> Void
     
-    private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
-    private let thirdColor = Color(red: 179/255, green: 220/255, blue: 217/255)
 
     
     var body: some View {
@@ -26,7 +24,7 @@ struct FilterBar: View {
                     }) {
                         Text("Remove filter")
                             .padding()
-                            .background(thirdColor)
+                            .background(CustomColor.thirdColor)
                             .foregroundColor(.white)
                             .cornerRadius(20)
                     }
@@ -37,7 +35,7 @@ struct FilterBar: View {
                         }) {
                             Text(category.name)
                                 .padding()
-                                .background(secundaryColor)
+                                .background(CustomColor.secundaryColor)
                                 .foregroundColor(.white)
                                 .cornerRadius(20)
                         }

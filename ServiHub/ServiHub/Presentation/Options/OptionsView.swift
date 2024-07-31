@@ -30,13 +30,15 @@ struct OptionsView: View {
                     HStack {
                         Text("Opciones")
                             .font(Font.custom("Grandstander-Italic-VariableFont_wght", size: 36))
-                            .foregroundColor(Color(red: 0.7, green: 0.69, blue: 0.85))
-                            .background(.white)
+                            .foregroundColor(CustomColor.secundaryColor)
+                            .background(CustomColor.colorLightUB)
                         
                         Spacer()
                         
-                        Image(systemName: "gearshape")
-                            .foregroundColor(Color(red: 0.7, green: 0.69, blue: 0.85))
+                        Image(systemName: "gear")
+                            .resizable()
+                            .frame(width: 41, height: 38)
+                            .foregroundColor(CustomColor.colorDarkBG)
                             .font(.system(size: 32))
                             .padding(.trailing, 16)
                     }
@@ -51,7 +53,7 @@ struct OptionsView: View {
                                 Font.custom("SF Compact Display", size: 26)
                                     .weight(.bold)
                             )
-                            .foregroundColor(Color(red: 0.48, green: 0.6, blue: 0.78))
+                            .foregroundColor(CustomColor.colorPrimaryDarken)
                             .padding(.horizontal, 16)
                         
                         // Botones del perfil
@@ -62,14 +64,14 @@ struct OptionsView: View {
                                 showingSheet = true
                             }) {
                                 HStack(spacing: 8) {
-                                    Image(systemName: "person.circle")
-                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                    Image(systemName: "person")
+                                        .foregroundColor(CustomColor.secundaryColor)
                                         .frame(width: 22, height: 22)
                                         .padding(.leading, 16)
                                     
                                     Text("Cambiar nombre de usuario")
                                         .font(Font.custom("SF Compact Display", size: 18))
-                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .foregroundColor(CustomColor.secundaryColor)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.horizontal, 8)
                                 }
@@ -83,13 +85,13 @@ struct OptionsView: View {
                             }) {
                                 HStack(spacing: 8) {
                                     Image(systemName: "envelope")
-                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .foregroundColor(CustomColor.secundaryColor)
                                         .frame(width: 22, height: 22)
                                         .padding(.leading, 16)
                                     
                                     Text("Cambiar email")
                                         .font(Font.custom("SF Compact Display", size: 18))
-                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .foregroundColor(CustomColor.secundaryColor)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.horizontal, 8)
                                 }
@@ -103,13 +105,13 @@ struct OptionsView: View {
                             }) {
                                 HStack(spacing: 8) {
                                     Image(systemName: "lock")
-                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .foregroundColor(CustomColor.secundaryColor)
                                         .frame(width: 22, height: 22)
                                         .padding(.leading, 16)
                                     
                                     Text("Cambiar contraseña")
                                         .font(Font.custom("SF Compact Display", size: 18))
-                                        .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                        .foregroundColor(CustomColor.secundaryColor)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.horizontal, 8)
                                 }
@@ -122,21 +124,22 @@ struct OptionsView: View {
                                 Font.custom("SF Compact Display", size: 26)
                                     .weight(.bold)
                             )
-                            .foregroundColor(Color(red: 0.48, green: 0.6, blue: 0.78))
+                            .foregroundColor(CustomColor.colorPrimaryDarken)
                             .padding(.horizontal, 16)
                         Divider()
                         
                         // Opción: Notificaciones
                         HStack {
-                            Image(systemName: "bell")
-                                .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                            Image(systemName: "bell.circle")
+                                .foregroundColor(CustomColor.secundaryColor)
                                 .frame(width: 22, height: 22)
                                 .padding(.leading, 16)
                             
                             Text("Notificaciones")
                                 .frame(maxWidth: .infinity, minHeight: 22, maxHeight: 22, alignment: .leading)
                                 .padding(0)
-                                .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                .foregroundColor(CustomColor.secundaryColor)
+                            
                             
                             Spacer()
                             
@@ -148,15 +151,15 @@ struct OptionsView: View {
                         
                         // Opción: Face ID
                         HStack {
-                            Image(systemName: "camera")
-                                .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                            Image(systemName: "camera.circle")
+                                .foregroundColor(CustomColor.secundaryColor)
                                 .frame(width: 22, height: 22)
                                 .padding(.leading, 16)
                             
                             Text("Face ID")
                                 .frame(maxWidth: .infinity, minHeight: 22, maxHeight: 22, alignment: .leading)
                                 .padding(0)
-                                .foregroundColor(Color(red: 0.63, green: 0.62, blue: 0.77))
+                                .foregroundColor(CustomColor.secundaryColor)
                             
                             Spacer()
                             
@@ -226,7 +229,7 @@ struct OptionsView: View {
                 }
                
                 
-                .background(Color.white)
+                .background(CustomColor.colorLightUB)
                 .cornerRadius(20)
                 .padding(.horizontal, 16)
                 .padding(.top, 16)

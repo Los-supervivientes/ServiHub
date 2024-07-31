@@ -5,6 +5,8 @@
 //  Created by Diego Andrades on 4/7/24.
 //
 
+
+
 import SwiftUI
 
 //MARK: - Creamos el enrutador de vistas
@@ -29,16 +31,14 @@ struct RootView: View {
             // Vista pantalla home
             HomeView(viewModel: HomeViewModel())
         case .error(error: let errorString):
-            LoadingView()
             // Vista error Login
-            /*
             ErrorView(error: errorString) {
                 vm.rootStatus = .initial
             }
-             */
         }
     }
 }
+
 
 
 

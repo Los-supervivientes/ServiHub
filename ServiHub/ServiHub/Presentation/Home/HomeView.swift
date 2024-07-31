@@ -13,8 +13,8 @@ struct HomeView: View {
     @StateObject var viewModel: HomeViewModel
     @State private var showingSheet = false
     
-    private let secundaryColor = Color(red: 179/255, green: 176/255, blue: 217/255)
-    private let colorDarkBG = Color(red: 51/255, green: 75/255, blue: 108/255)
+
+
     
     var body: some View {
         NavigationStack {
@@ -103,14 +103,14 @@ struct HomeView: View {
                         Image(systemName: "gear")
                             .resizable()
                             .frame(width: 41, height: 38)
-                            .foregroundColor(colorDarkBG)
+                            .foregroundColor(CustomColor.colorDarkBG)
                             .padding(.trailing, -20.0)
                         
                     }
                     .sheet(isPresented: $showingSheet) {
                         VStack{
                             Capsule()
-                                .fill(colorDarkBG)
+                                .fill(CustomColor.colorDarkBG)
                                 .frame(width: 60, height: 3)
                                 .padding(10)
                             
@@ -119,7 +119,7 @@ struct HomeView: View {
                         }
                     }
                     .padding(.trailing, 20)
-                    .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+                    .opacity(0.8)
                     
                 }
             }

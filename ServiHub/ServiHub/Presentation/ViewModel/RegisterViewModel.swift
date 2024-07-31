@@ -10,14 +10,13 @@ import Foundation
 
 final class RegisterViewModel: ObservableObject{
     
-    private var rootViewModel: LoginViewModel
-
-    
+    // MARK: - Properties
     @Published var categories: [CategoriesModel]?
     private var registerUseCase: RegisterUseCaseProtocol
-    
+    private var rootViewModel: LoginViewModel
     private var network: CategoriesUseCaseProtocol
     
+    // MARK: - Inits
     init(rootViewModel: LoginViewModel, registerUseCase: RegisterUseCaseProtocol = RegisterUseCase(), network: CategoriesUseCaseProtocol = CategoriesUseCase()) {
         self.rootViewModel = rootViewModel
         self.registerUseCase = registerUseCase
@@ -28,6 +27,7 @@ final class RegisterViewModel: ObservableObject{
         
     }
     
+    //MARK: - getServices
     ///Función para cargar la lista de Servicios al llamar a la vista
     func getServices(){
         Task{
@@ -82,7 +82,7 @@ final class RegisterViewModel: ObservableObject{
             return "Error campo country Vacio"
             
         }
-        self.rootViewModel.rootStatus = .loading
+        rootViewModel.rootStatus = .loading
         RegisterApp(typeUser: typeUser, name: name, firstSurname: firstSurname, secondSurname: secondSurname, mobile: mobile, email: email, password: password, street: street, city: city, state: state, postalCode: postalCode, country: country, categoryBusiness: categoryBusiness ?? "", companyName: companyName, nif: nif)
         
         return ""
@@ -130,10 +130,9 @@ final class RegisterViewModel: ObservableObject{
                     print("El resultado está vacío")
                 }
             } catch {
-                self.rootViewModel.rootStatus = .register
+                rootViewModel.rootStatus = .register
                 
             }
         }
     }
-    
 }
