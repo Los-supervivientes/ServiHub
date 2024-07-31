@@ -6,7 +6,7 @@ Proyecto final del Bootcamp Desarrollo de Apps Móviles impartido por keepcoding
 **ServiHub** es una aplicación que ofrece una plataforma para conectar usuarios con profesionales de diversos servicios, desde fontaneros y peluqueros hasta abogados. La aplicación permite a los usuarios gestionar reservas, valorar servicios y comunicarse a través de un chat integrado.
 
 ### Funcionalidades
-####Registro de Usuarios
+#### Registro de Usuarios
 - Los usuarios pueden registrarse como clientes o profesionales.
 #### Gestión de Reservas** 
 - Los usuarios pueden reservar servicios de profesionales disponibles.
