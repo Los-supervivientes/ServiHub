@@ -8,7 +8,7 @@ Proyecto final del Bootcamp Desarrollo de Apps Móviles impartido por keepcoding
 ### Funcionalidades
 #### Registro de Usuarios
 - Los usuarios pueden registrarse como clientes o profesionales.
-#### Gestión de Reservas** 
+#### Gestión de Reservas 
 - Los usuarios pueden reservar servicios de profesionales disponibles.
 #### Valoraciones 
 - Los clientes pueden valorar y dejar comentarios sobre los servicios recibidos.
@@ -16,11 +16,11 @@ Proyecto final del Bootcamp Desarrollo de Apps Móviles impartido por keepcoding
 - Los profesionales pueden crear y gestionar su perfil de negocio.
 #### Chat en Tiempo Real
 - Comunicación directa entre usuarios clientes y profesionales.
-- 
+
 ### Capturas de Pantalla
 | ![Simulador1](https://github.com/Los-supervivientes/ServiHub/blob/main/Photos%20for%20git/Captura1.png) | ![Simulador2](https://github.com/Los-supervivientes/ServiHub/blob/main/Photos%20for%20git/Captura2.png) | ![Simulador3](https://github.com/Los-supervivientes/ServiHub/blob/main/Photos%20for%20git/Captura3.png) | ![Simulador4](https://github.com/Los-supervivientes/ServiHub/blob/main/Photos%20for%20git/Captura4.png) |![Simulador5](https://github.com/Los-supervivientes/ServiHub/blob/main/Photos%20for%20git/Captura5.png) | ![Simulador6](https://github.com/Los-supervivientes/ServiHub/blob/main/Photos%20for%20git/Captura6.png) |
 | --- | --- | --- | --- | --- | --- | 
-| 1 | 2 | 3 | 4 | 5 | 6 |
+| Login | Register | Error | Charge | Home | Setting |
 
 ```
 1. Login -> Pantalla en la cual tenemos que logearnos.
@@ -50,7 +50,7 @@ propio servicio.
 ```
 6 Ventana de Setting -> Setting de la APP.
 ```
-```
+
 
 
 
