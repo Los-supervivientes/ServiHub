@@ -64,6 +64,9 @@ La aplicación se ha desarrollado utilizando el patrón de arquitectura MVVM (Mo
 #### ViewModel
 - Actúa como un intermediario entre el Model y la View, manejando la lógica de presentación y gestionando las respuestas a las interacciones del usuario.
 
+### PROYECTO FIGMA
+- https://www.figma.com/design/2uPnXixqGkrZXWLF87hxfo/ServiceHub?node-id=0-1&m=dev&t=eANtId0BQNtgoE4G-1
+
 ### Tecnologías Utilizadas
 - **Lenguaje:** Swift.
 - **Backend:** Vapor con PostgreSQL.
